@@ -1,61 +1,19 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { FaQuoteLeft, FaQuoteRight, FaStar } from "react-icons/fa";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
-
-const face = (id: string) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=200&h=200&q=80`;
-
-const reviews = [
-  {
-    name: "Rahul Mehta",
-    role: "Founder & CEO",
-    company: "Mehta Traders",
-    img: face("photo-1507003211169-0a1dd7228f2d"),
-    text: "Excellent service and professional approach. They helped us streamline our accounting and made tax compliance so much easier. Highly recommended for any growing business.",
-  },
-  {
-    name: "Priya Sharma",
-    role: "Managing Director",
-    company: "Sharma Enterprises",
-    img: face("photo-1494790108377-be9c29b29330"),
-    text: "Their team is knowledgeable, responsive and always available for guidance. They have been a valuable partner in our business growth journey. The level of support we receive is outstanding.",
-  },
-  {
-    name: "Amit Verma",
-    role: "Director",
-    company: "Verma Solutions",
-    img: face("photo-1500648767791-00dcc994a43e"),
-    text: "Professional, reliable and extremely supportive. They simplified our bookkeeping, improved our financial planning and saved us valuable time. We truly appreciate their dedication and expertise.",
-  },
-  {
-    name: "Neha Kapoor",
-    role: "Co-Founder",
-    company: "Kapoor Retail",
-    img: face("photo-1438761681033-6461ffad8d80"),
-    text: "Clear communication and accurate filings every single time. Our audits are now stress-free and our books are always up to date.",
-  },
-  {
-    name: "Vikram Singh",
-    role: "Owner",
-    company: "Singh Logistics",
-    img: face("photo-1472099645785-5658abf4ff4e"),
-    text: "Their advisory helped us restructure our costs and plan taxes smartly. A dependable team that truly understands growing businesses.",
-  },
-  {
-    name: "Anjali Rao",
-    role: "CFO",
-    company: "Rao Technologies",
-    img: face("photo-1580489944761-15a19d654956"),
-    text: "From payroll to compliance, everything is handled with care and precision. We trust them completely with our finances.",
-  },
-];
+import { site } from "@/data/index";
+import { iconMap } from "@/app/components/iconMap";
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
   const [perView, setPerView] = useState(3);
   const touchX = useRef<number | null>(null);
+
+  const data = site.testimonialSec;
+  const QuoteLeft = iconMap["FaQuoteLeft"];
+  const QuoteRight = iconMap["FaQuoteRight"];
+  const Star = iconMap["FaStar"];
 
   useEffect(() => {
     const update = () => {
@@ -67,7 +25,7 @@ export default function Testimonials() {
     return () => window.removeEventListener("resize", update);
   }, []);
 
-  const maxIndex = reviews.length - perView;
+  const maxIndex = data.reviews.length - perView;
   const current = Math.min(index, maxIndex);
 
   const prev = () => setIndex(current <= 0 ? maxIndex : current - 1);
@@ -83,25 +41,24 @@ export default function Testimonials() {
         <div className="flex items-center justify-center gap-4">
           <span className="h-[2px] w-10 bg-[#b98a4a]" />
           <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#0b3b34]">
-            Client Reviews
+            {data.badge}
           </p>
         </div>
         <h2 className="mt-2 text-3xl sm:text-4xl md:text-[44px] font-bold  text-[#0b3b34]">
-          What Our Clients Say
-          <span className="block text-[#b98a4a]">About Our Services</span>
+          {data.titlePrefix}
+          <span className="block text-[#b98a4a]">{data.titleHighlight}</span>
         </h2>
         <p className="mx-auto mt-2 max-w-2xl text-gray-500">
-          Our clients’ success is our greatest achievement. Here’s what business
-          owners and professionals say about working with us.
+          {data.description}
         </p>
       </div>
 
       {/* Slider */}
-      <div className="relative mx-auto mt-6 max-w-[1400px] px-8 sm:px-12">
-        <button onClick={prev} aria-label="Previous" className={`${arrowCls} left-1 sm:left-2`}>
+      <div className="relative mx-auto mt-6 max-w-[1320px] px-4 sm:px-6 lg:px-8">
+        <button onClick={prev} aria-label="Previous" className={`${arrowCls} hidden md:flex left-1 md:left-2`}>
           <HiArrowLongLeft />
         </button>
-        <button onClick={next} aria-label="Next" className={`${arrowCls} right-1 sm:right-2`}>
+        <button onClick={next} aria-label="Next" className={`${arrowCls} hidden md:flex right-1 md:right-2`}>
           <HiArrowLongRight />
         </button>
 
@@ -119,14 +76,14 @@ export default function Testimonials() {
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${(current * 100) / perView}%)` }}
           >
-            {reviews.map((r) => (
+            {data.reviews.map((r) => (
               <div
                 key={r.name}
                 className="shrink-0 px-3"
                 style={{ width: `${100 / perView}%` }}
               >
                 <article className="flex h-full flex-col rounded-xl bg-white p-7 border-1 border-gray-200">
-                  <FaQuoteLeft className="text-4xl text-[#b98a4a]" />
+                  {QuoteLeft && <QuoteLeft className="text-4xl text-[#b98a4a]" />}
 
                   <p className="mt-4 min-h-[130px] text-[17px] leading-relaxed text-gray-700">
                     {r.text}
@@ -134,7 +91,7 @@ export default function Testimonials() {
 
                   <div className="mt-4 flex gap-1 text-[#e0951d]">
                     {Array.from({ length: 5 }).map((_, i) => (
-                      <FaStar key={i} />
+                      <span key={i}>{Star && <Star />}</span>
                     ))}
                   </div>
 
@@ -153,7 +110,7 @@ export default function Testimonials() {
                         {r.company}
                       </p>
                     </div>
-                    <FaQuoteRight className="ml-auto shrink-0 text-5xl text-gray-200" />
+                    {QuoteRight && <QuoteRight className="ml-auto shrink-0 text-5xl text-gray-200" />}
                   </div>
                 </article>
               </div>
@@ -162,7 +119,7 @@ export default function Testimonials() {
         </div>
 
         {/* Dots */}
-        <div className="mt-5 flex justify-center gap-3">
+        <div className="mt-5 hidden justify-center gap-3 md:flex">
           {Array.from({ length: maxIndex + 1 }).map((_, i) => (
             <button
               key={i}

@@ -1,29 +1,19 @@
-import { FaUsers, FaShieldAlt, FaChartLine, FaPlus } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
 import { HiArrowLongRight } from "react-icons/hi2";
+import { site } from "@/data/index";
+import { iconMap } from "@/app/components/iconMap";
+import AnimatedCounter from "@/app/components/ui/animated-counter";
 
-const u = (id: string, w = 800) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
+export default function About({ hideCTA = false }: { hideCTA?: boolean }) {
+  const data = site.about;
 
-const points = [
-  { icon: FaUsers, text: "Client-Focused Approach" },
-  { icon: FaShieldAlt, text: "Transparent & Reliable Services" },
-  { icon: FaChartLine, text: "Long-Term Business Support" },
-];
-
-const avatars = [
-  u("photo-1507003211169-0a1dd7228f2d", 120),
-  u("photo-1494790108377-be9c29b29330", 120),
-  u("photo-1500648767791-00dcc994a43e", 120),
-];
-
-export default function About() {
   return (
     <section className="relative overflow-hidden mt-8 sm:mt-10 md:mt-12 lg:mt-14">
       {/* soft decorative shapes */}
       <div className="pointer-events-none absolute -right-20 top-0 hidden h-72 w-40 rotate-[30deg] bg-[#f1e6d2]/60 lg:block" />
       <div className="pointer-events-none absolute bottom-0 left-1/3 hidden h-40 w-72 -skew-x-12 bg-[#f1e6d2]/50 lg:block" />
 
-      <div className="relative mx-auto grid max-w-[1300px] px-8 lg:px-14 items-center gap-14  lg:grid-cols-2">
+      <div className="relative mx-auto grid max-w-[1320px] px-4 sm:px-6 lg:px-8 items-center gap-14 lg:grid-cols-2">
         {/* ---------- Left: image collage ---------- */}
         <div className="relative mx-auto h-[420px] w-full max-w-[600px] sm:h-[520px]">
           {/* dark green shape */}
@@ -37,14 +27,14 @@ export default function About() {
           {/* main image */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={u("photo-1556761175-5973dc0f32e7", 900)}
+            src={data.images.main}
             alt="Advisors reviewing documents with a client"
             className="absolute left-0 top-0 h-[80%] w-[56%] rounded-lg border-4 border-white object-cover shadow-xl sm:left-6"
           />
           {/* second image */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={u("photo-1589829545856-d10d557cf95f", 900)}
+            src={data.images.secondary}
             alt="Law books and scales of justice"
             className="absolute right-0 top-[5%] h-[80%] w-[46%] rounded-lg object-cover shadow-xl"
           />
@@ -52,7 +42,7 @@ export default function About() {
           {/* clients badge */}
           <div className="absolute bottom-[4%] left-[8%] flex flex-col items-center rounded-lg bg-white px-6 py-4 shadow-xl sm:left-[16%]">
             <div className="flex items-center">
-              {avatars.map((src, i) => (
+              {data.clients.avatars.map((src, i) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   key={i}
@@ -66,7 +56,7 @@ export default function About() {
               </span>
             </div>
             <p className="mt-3 text-lg text-gray-800">
-              <span className="font-semibold text-[#b98a4a]">20K+</span> Clients Worldwide
+              <span className="font-semibold text-[#b98a4a]">{data.clients.textPrefix}</span> {data.clients.textSuffix}
             </p>
           </div>
         </div>
@@ -76,56 +66,58 @@ export default function About() {
           <div className="flex items-center gap-4">
             <span className="h-[2px] w-10 bg-[#b98a4a]" />
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#0b3b34]">
-              About Us
+              {data.badge}
             </p>
           </div>
 
           <h2 className="mt-2 text-3xl sm:text-4xl md:text-[44px] font-bold text-[#0b3b34]">
-            Your Trusted Partner for
-            <span className="block text-[#b98a4a]">Smarter Business Growth</span>
+            {data.titlePrefix}
+            <span className="block text-[#b98a4a]">{data.titleHighlight}</span>
           </h2>
 
           <p className="mt-6 max-w-xl leading-relaxed text-gray-500">
-            We are a team of experienced chartered accountants and business
-            advisors dedicated to delivering reliable financial, tax and
-            compliance solutions. Our goal is to help businesses stay compliant,
-            make informed decisions and achieve long-term growth.
+            {data.description}
           </p>
 
           {/* stats box */}
           <div className="mt-8 flex flex-col gap-6 rounded-lg border border-gray-200 bg-white p-6 sm:flex-row sm:items-center sm:gap-8">
             <div className="shrink-0 sm:pl-4">
-              <p className="text-7xl font-bold leading-none text-[#0b3b34]">25+</p>
-              <p className="mt-3 font-medium leading-snug text-[#0b3b34]">
-                Years of
-                <br />
-                Working Experience
+              <p className="text-7xl font-bold leading-none text-[#0b3b34]">
+                <AnimatedCounter endValue={data.stats.number} />
+              </p>
+              <p className="mt-3 font-medium leading-snug text-[#0b3b34] whitespace-pre-line">
+                {data.stats.text}
               </p>
             </div>
 
             <span className="hidden h-24 w-px bg-[#b98a4a]/50 sm:block" />
 
             <ul className="flex flex-col gap-3">
-              {points.map(({ icon: Icon, text }) => (
-                <li key={text} className="flex items-center gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#f6efe1] text-lg text-[#b98a4a] ring-1 ring-[#b98a4a]/30">
-                    <Icon />
-                  </span>
-                  <span className="text-sm text-gray-600">{text}</span>
-                </li>
-              ))}
+              {data.points.map(({ icon, text }) => {
+                const Icon = iconMap[icon];
+                return (
+                  <li key={text} className="flex items-center gap-4">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#f6efe1] text-lg text-[#b98a4a] ring-1 ring-[#b98a4a]/30">
+                      {Icon && <Icon />}
+                    </span>
+                    <span className="text-sm text-gray-600">{text}</span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
-          <a
-            href="/about"
-            className="mt-8 inline-flex items-center gap-4 rounded-md bg-[#0b3b34] py-3 pl-6 pr-4 font-medium text-white transition hover:bg-[#0f4d44]"
-          >
-            Discover More
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#e5b861] text-xl text-[#0b3b34]">
-              <HiArrowLongRight />
-            </span>
-          </a>
+          {!hideCTA && (
+            <a
+              href={data.cta.href}
+              className="mt-8 inline-flex items-center gap-4 rounded-md bg-[#0b3b34] py-3 pl-6 pr-4 font-medium text-white transition hover:bg-[#0f4d44]"
+            >
+              {data.cta.label}
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#e5b861] text-xl text-[#0b3b34]">
+                <HiArrowLongRight />
+              </span>
+            </a>
+          )}
         </div>
       </div>
     </section>

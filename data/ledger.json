@@ -1,0 +1,1602 @@
+{
+  "LedgerIndustries": {
+    "templateComponents": {
+      "template-1": {
+        "shared": {
+          "Topbar": "LedgerTopbar1",
+          "Header": "LedgerHeader1",
+          "Footer": "LedgerFooter1"
+        },
+        "pages": {
+          "home": {
+            "components": [
+              {
+                "key": "Banner",
+                "component": "LedgerBanner1"
+              },
+              {
+                "key": "Services",
+                "component": "LedgerServices1"
+              },
+              {
+                "key": "About",
+                "component": "LedgerAbout1"
+              },
+              {
+                "key": "Achievements",
+                "component": "LedgerAchievements1"
+              },
+              {
+                "key": "Process",
+                "component": "LedgerProcess1"
+              },
+              {
+                "key": "Testimonial",
+                "component": "LedgerTestimonial1"
+              },
+              {
+                "key": "Blog",
+                "component": "LedgerBlog1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "sections": {
+      "SubBanner": {
+        "variants": {
+          "AboutSubBanner": {
+            "title": "About Us",
+            "bgImage": "/subbb.jpg",
+            "breadcrumbs": [
+              {
+                "label": "HOME",
+                "href": "/"
+              },
+              {
+                "label": "About Us",
+                "href": "/about"
+              }
+            ]
+          },
+          "services": {
+            "title": "Services",
+            "bgImage": "/subbb.jpg",
+            "breadcrumbs": [
+              {
+                "label": "HOME",
+                "href": "/"
+              },
+              {
+                "label": "Services",
+                "href": "/services"
+              }
+            ]
+          },
+          "portfolio": {
+            "title": "Portfolio Project",
+            "bgImage": "/subbb.jpg",
+            "breadcrumbs": [
+              {
+                "label": "HOME",
+                "href": "/"
+              },
+              {
+                "label": "Portfolio  Project",
+                "href": "/portfolio"
+              }
+            ]
+          },
+          "blog": {
+            "title": "Blogs",
+            "bgImage": "/subbb.jpg",
+            "breadcrumbs": [
+              {
+                "label": "HOME",
+                "href": "/"
+              },
+              {
+                "label": "Blogs",
+                "href": "/blog"
+              }
+            ]
+          },
+          "quote": {
+            "title": "Get a Quote",
+            "bgImage": "/subbb.jpg",
+            "breadcrumbs": [
+              {
+                "label": "HOME",
+                "href": "/"
+              },
+              {
+                "label": "Get a Quote",
+                "href": "/quote"
+              }
+            ]
+          },
+          "contact": {
+            "title": "Contact Us",
+            "bgImage": "/subbb.jpg",
+            "breadcrumbs": [
+              {
+                "label": "HOME",
+                "href": "/"
+              },
+              {
+                "label": "Contact Us",
+                "href": "/contact"
+              }
+            ]
+          },
+          "thankyou": {
+            "title": "Thank You",
+            "bgImage": "/subbb.jpg",
+            "breadcrumbs": [
+              {
+                "label": "HOME",
+                "href": "/"
+              },
+              {
+                "label": "Thank You",
+                "href": "/thankyou"
+              }
+            ]
+          },
+          "servicedetails": {
+            "title": "Services Details",
+            "bgImage": "/subbb.jpg",
+            "breadcrumbs": [
+              {
+                "label": "HOME",
+                "href": "/"
+              },
+              {
+                "label": "Services",
+                "href": "/services"
+              },
+              {
+                "label": "Services Details",
+                "href": "/servicedetails"
+              }
+            ]
+          },
+          "blogdetails": {
+            "title": "Blog Detail",
+            "bgImage": "/subbb.jpg",
+            "breadcrumbs": [
+              {
+                "label": "HOME",
+                "href": "/"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
+              },
+              {
+                "label": "Blog Detail",
+                "href": "/blogdetails"
+              }
+            ]
+          }
+        }
+      },
+      "Brand": {
+        "variants": {
+          "LedgerBrand1": {
+            "name": "Ledger & Co. Chartered Accountants",
+            "logo": {
+              "src": "/logo1.png",
+              "alt": "Ledger & Co. Chartered Accountants",
+              "width": 320,
+              "height": 90
+            },
+            "footerLogo": {
+              "src": "/logo2.png",
+              "alt": "Ledger & Co. Chartered Accountants",
+              "width": 320,
+              "height": 90
+            },
+            "socials": [
+              {
+                "icon": "FaFacebookF",
+                "href": "#",
+                "label": "Facebook"
+              },
+              {
+                "icon": "FaInstagram",
+                "href": "#",
+                "label": "Instagram"
+              },
+              {
+                "icon": "FaLinkedinIn",
+                "href": "#",
+                "label": "LinkedIn"
+              },
+              {
+                "icon": "FaYoutube",
+                "href": "#",
+                "label": "YouTube"
+              }
+            ],
+            "contacts": {
+              "email": "info@ledgerandco.com",
+              "supportEmail": "support@ledgerandco.com",
+              "phone1": "+91 98765 43210",
+              "phone2": "+91 98765 43211",
+              "timing1": "Mon - Fri: 9:00 AM - 6:00 PM",
+              "timing2": "Sat: 9:00 AM - 1:00 PM",
+              "address1": "123 Business Avenue,",
+              "address2": "Mumbai, Maharashtra 400001"
+            }
+          }
+        }
+      },
+      "Topbar": {
+        "variants": {
+          "LedgerTopbar1": {
+            "info": [
+              {
+                "icon": "MdOutlineMail",
+                "text": "dummy@xyz.com"
+              },
+              {
+                "icon": "FiPhoneCall",
+                "text": "+1 0000000000"
+              }
+             
+            ]
+          }
+        }
+      },
+      "Header": {
+        "variants": {
+          "LedgerHeader1": {
+            "links": [
+              {
+                "name": "Home",
+                "href": "/"
+              },
+              {
+                "name": "About",
+                "href": "/about"
+              },
+              {
+                "name": "Services",
+                "href": "/services"
+              },
+              {
+                "name": "Portfolio",
+                "href": "/portfolio"
+              },
+              {
+                "name": "Blogs",
+                "href": "/blog"
+              },
+              {
+                "name": "Contact Us",
+                "href": "/contact"
+              }
+            ],
+            "cta": {
+              "label": "Get a Quote",
+              "href": "/quote"
+            }
+          }
+        }
+      },
+      "Banner": {
+        "variants": {
+          "LedgerBanner1": {
+            "image": "/banner1.png",
+            "badge": "Chartered Accountants",
+            "titlePrefix": "Business",
+            "titleHighlight": "Advisor",
+            "description": "Reliable accounting, tax and advisory solutions to help your business grow with confidence.",
+            "cta": {
+              "label": "Discover More",
+              "href": "/about"
+            }
+          }
+        }
+      },
+      "Services": {
+        "variants": {
+          "LedgerServices1": {
+            "badge": "Our Services",
+            "titlePrefix": "Professional Financial Solutions",
+            "titleHighlight": "for Your Business",
+            "description": "We offer a full range of accounting, tax, advisory and compliance services to help your business stay organized, compliant and ready for future growth.",
+            "services": [
+              {
+                "slug": "accounting-bookkeeping",
+                "title": "Accounting & Bookkeeping",
+                "text": "Accurate and timely bookkeeping to keep your business finances organized and stress-free.",
+                "icon": "FaCalculator",
+                "img": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80"
+              },
+              {
+                "slug": "tax-planning",
+                "title": "Tax Planning & Compliance",
+                "text": "Strategic tax planning to minimize liabilities and ensure full compliance with evolving tax laws and regulations.",
+                "icon": "FaFileInvoiceDollar",
+                "img": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80"
+              },
+              {
+                "slug": "business-advisory",
+                "title": "Business Advisory",
+                "text": "Expert guidance to help you make informed decisions, improve efficiency and achieve long-term growth.",
+                "icon": "FaChartLine",
+                "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+              },
+              {
+                "slug": "regulatory-compliance",
+                "title": "Regulatory & Compliance",
+                "text": "Stay compliant with applicable laws and regulations with our reliable compliance support service.",
+                "icon": "FaShieldAlt",
+                "img": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80"
+              },
+              {
+                "slug": "audit-assurance",
+                "title": "Audit & Assurance",
+                "text": "Independent audits that give stakeholders confidence in your financial statements.",
+                "icon": "FaBalanceScale",
+                "img": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=800&q=80"
+              },
+              {
+                "slug": "payroll-services",
+                "title": "Payroll Services",
+                "text": "Hassle-free payroll processing, statutory deductions and timely salary compliance.",
+                "icon": "FaUsers",
+                "img": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80"
+              },
+              {
+                "slug": "company-registration",
+                "title": "Company Registration",
+                "text": "End-to-end support to incorporate and register your business the right way.",
+                "icon": "FaBuilding",
+                "img": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80"
+              },
+              {
+                "slug": "financial-reporting",
+                "title": "Financial Reporting",
+                "text": "Detailed and accurate financial reports to give you complete visibility and control over your business performance.",
+                "icon": "FaChartLine",
+                "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+              }
+            ]
+          }
+        }
+      },
+      "About": {
+        "variants": {
+          "LedgerAbout1": {
+            "badge": "About Us",
+            "titlePrefix": "Your Trusted Partner for",
+            "titleHighlight": "Smarter Business Growth",
+            "description": "We are a team of experienced chartered accountants and business advisors dedicated to delivering reliable financial, tax and compliance solutions. Our goal is to help businesses stay compliant, make informed decisions and achieve long-term growth.",
+            "stats": {
+              "number": "25+",
+              "text": "Years of\nWorking Experience"
+            },
+            "points": [
+              {
+                "icon": "FaUsers",
+                "text": "Client-Focused Approach"
+              },
+              {
+                "icon": "FaShieldAlt",
+                "text": "Transparent & Reliable Services"
+              },
+              {
+                "icon": "FaChartLine",
+                "text": "Long-Term Business Support"
+              }
+            ],
+            "cta": {
+              "label": "Discover More",
+              "href": "/about"
+            },
+            "images": {
+              "main": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80",
+              "secondary": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=80"
+            },
+            "clients": {
+              "avatars": [
+                "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80",
+                "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80",
+                "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80"
+              ],
+              "textPrefix": "20K+",
+              "textSuffix": "Clients Worldwide"
+            }
+          }
+        }
+      },
+      "Achievements": {
+        "variants": {
+          "LedgerAchievements1": {
+            "badge": "Our Achievements",
+            "titlePrefix": "Numbers",
+            "titleHighlight": "That Reflect",
+            "titleSuffix": "Our Commitment",
+            "description": "Our growth is built on the success of our clients and the trust they place in us. Every number represents a real business, a real partnership and a shared journey towards long-term success.",
+            "bgImage": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1400&q=80",
+            "stats": [
+              {
+                "icon": "FaUsers",
+                "number": "25",
+                "suffix": "+",
+                "label": "Years of Experience"
+              },
+              {
+                "icon": "FaHandshake",
+                "number": "20K",
+                "suffix": "+",
+                "label": "Happy Clients"
+              },
+              {
+                "icon": "FaFileInvoiceDollar",
+                "number": "50K",
+                "suffix": "+",
+                "label": "Tax Returns Filed"
+              },
+              {
+                "icon": "FaChartLine",
+                "number": "99",
+                "suffix": "%",
+                "label": "Client Satisfaction"
+              }
+            ]
+          }
+        }
+      },
+      "Process": {
+        "variants": {
+          "LedgerProcess1": {
+            "badge": "How It Works",
+            "titlePrefix": "Our Simple & Transparent",
+            "titleHighlight": "Accounting Process",
+            "description": "We follow a clear and structured process to deliver accurate, compliant and result-driven financial solutions for your business.",
+            "steps": [
+              {
+                "number": "01",
+                "icon": "FaRegCalendarAlt",
+                "title": "Initial Consultation",
+                "text": "We understand your business needs, goals and challenges to provide the right financial guidance.",
+                "image": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1000&q=80"
+              },
+              {
+                "number": "02",
+                "icon": "FaSearchDollar",
+                "title": "Analyze & Strategize",
+                "text": "Our team reviews your financial records, identifies opportunities for tax savings and creates a customized strategy for your business growth.",
+                "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80"
+              },
+              {
+                "number": "03",
+                "icon": "FaHandHoldingUsd",
+                "title": "Manage & Support",
+                "text": "We handle your day-to-day accounting, tax filings and compliance, providing ongoing support so you can focus on growing your business with confidence We handle your day-to-day accounting, tax filings and compliance, providing ongoing support so you can focus on growing your business with confidence.."
+              }
+            ]
+          }
+        }
+      },
+      "Testimonial": {
+        "variants": {
+          "LedgerTestimonial1": {
+            "badge": "Client Reviews",
+            "titlePrefix": "What Our Clients Say",
+            "titleHighlight": "About Our Services",
+            "description": "Our clients’ success is our greatest achievement. Here’s what business owners and professionals say about working with us.",
+            "reviews": [
+              {
+                "name": "Rahul Mehta",
+                "role": "Founder & CEO",
+                "company": "Mehta Traders",
+                "img": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80",
+                "text": "Excellent service and professional approach. They helped us streamline our accounting and made tax compliance so much easier. Highly recommended for any growing business."
+              },
+              {
+                "name": "Priya Sharma",
+                "role": "Managing Director",
+                "company": "Sharma Enterprises",
+                "img": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80",
+                "text": "Their team is knowledgeable, responsive and always available for guidance. They have been a valuable partner in our business growth journey. The level of support we receive is outstanding."
+              },
+              {
+                "name": "Amit Verma",
+                "role": "Director",
+                "company": "Verma Solutions",
+                "img": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
+                "text": "Professional, reliable and extremely supportive. They simplified our bookkeeping, improved our financial planning and saved us valuable time. We truly appreciate their dedication and expertise."
+              },
+              {
+                "name": "Neha Kapoor",
+                "role": "Co-Founder",
+                "company": "Kapoor Retail",
+                "img": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&h=200&q=80",
+                "text": "Clear communication and accurate filings every single time. Our audits are now stress-free and our books are always up to date."
+              },
+              {
+                "name": "Vikram Singh",
+                "role": "Owner",
+                "company": "Singh Logistics",
+                "img": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200&q=80",
+                "text": "Their advisory helped us restructure our costs and plan taxes smartly. A dependable team that truly understands growing businesses."
+              },
+              {
+                "name": "Anjali Rao",
+                "role": "CFO",
+                "company": "Rao Technologies",
+                "img": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&h=200&q=80",
+                "text": "From payroll to compliance, everything is handled with care and precision. We trust them completely with our finances."
+              }
+            ]
+          }
+        }
+      },
+      "Blog": {
+        "variants": {
+          "LedgerBlog1": {
+            "badge": "Our Blogs",
+            "titlePrefix": "Latest Insights & Resources",
+            "titleHighlight": "Smarter Business Growth",
+            "titleSuffix": "for",
+            "description": "Explore our latest articles, tips and expert insights to help you manage finances, stay compliant and grow your business with confidence.",
+            "posts": [
+              {
+                "tag": "Accounting & Bookkeeping",
+                "date": "August 25, 2024",
+                "title": "Why Accurate Bookkeeping Is Essential for Business Growth",
+                "text": "Discover how accurate bookkeeping helps you stay organized, reduce errors and make better financial decisions.",
+                "img": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80",
+                "href": "/blogs/accurate-bookkeeping"
+              },
+              {
+                "tag": "Accounting & Bookkeeping",
+                "date": "August 26, 2024",
+                "title": "The Benefits of Cloud Accounting",
+                "text": "Learn why moving your bookkeeping to the cloud is essential for real-time financial tracking.",
+                "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
+                "href": "/blogs/cloud-accounting-benefits"
+              },
+              {
+                "tag": "Tax Planning",
+                "date": "August 21, 2024",
+                "title": "Smart Tax Planning Strategies for Small Businesses",
+                "text": "Learn effective tax planning strategies to minimize liabilities and keep your business compliant with the latest regulations.",
+                "img": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=900&q=80",
+                "href": "/blogs/tax-planning-strategies"
+              },
+              {
+                "tag": "Tax Planning",
+                "date": "August 22, 2024",
+                "title": "Year-End Tax Planning Tips",
+                "text": "Essential tips to prepare your business for year-end tax filings and maximize deductions.",
+                "img": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=900&q=80",
+                "href": "/blogs/year-end-tax-tips"
+              },
+              {
+                "tag": "Business Advisory",
+                "date": "August 20, 2024",
+                "title": "5 Financial Tips to Improve Your Business Profitability",
+                "text": "Explore practical financial tips that can help you increase efficiency, manage costs and boost your overall business profitability.",
+                "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
+                "href": "/blogs/improve-profitability"
+              },
+              {
+                "tag": "Business Advisory",
+                "date": "August 19, 2024",
+                "title": "How to Scale Your Business Sustainably",
+                "text": "Expert advisory on scaling your business operations without compromising on financial stability.",
+                "img": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80",
+                "href": "/blogs/scale-business-sustainably"
+              },
+              {
+                "tag": "Audit & Assurance",
+                "date": "August 15, 2024",
+                "title": "Understanding the Importance of Regular Financial Audits",
+                "text": "Discover why regular financial audits are critical for transparency, compliance, and building trust with stakeholders.",
+                "img": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=900&q=80",
+                "href": "/blogs/importance-of-audits"
+              },
+              {
+                "tag": "Audit & Assurance",
+                "date": "August 14, 2024",
+                "title": "Preparing Your Business for an External Audit",
+                "text": "A step-by-step guide to preparing your financial records for a smooth external audit process.",
+                "img": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80",
+                "href": "/blogs/preparing-for-external-audit"
+              },
+              {
+                "tag": "Financial Reporting",
+                "date": "August 13, 2024",
+                "title": "The Role of Accurate Financial Reporting",
+                "text": "Why transparent and accurate financial reporting is the backbone of any successful organization.",
+                "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
+                "href": "/blogs/accurate-financial-reporting"
+              },
+              {
+                "tag": "Financial Reporting",
+                "date": "August 12, 2024",
+                "title": "Understanding Your Financial Statements",
+                "text": "Learn how to read and interpret your balance sheet, income statement, and cash flow statement.",
+                "img": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80",
+                "href": "/blogs/understanding-financial-statements"
+              },
+              {
+                "tag": "Company Formation",
+                "date": "August 10, 2024",
+                "title": "A Guide to Company Formation and Legal Structures",
+                "text": "Learn about the different types of company structures and choose the best fit for your new business venture.",
+                "img": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80",
+                "href": "/blogs/company-formation-guide"
+              },
+              {
+                "tag": "Company Formation",
+                "date": "August 09, 2024",
+                "title": "Steps to Register a New Startup",
+                "text": "A comprehensive checklist of the steps required to legally register and launch your startup.",
+                "img": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80",
+                "href": "/blogs/register-new-startup"
+              }
+            ]
+          }
+        }
+      },
+      "Footer": {
+        "variants": {
+          "LedgerFooter1": {
+            "description": "Trusted chartered accountants delivering comprehensive accounting, taxation and financial advisory solutions to help businesses grow with confidence.",
+            "quickLinks": [
+              {
+                "name": "Home",
+                "href": "/"
+              },
+              {
+                "name": "About Us",
+                "href": "/about"
+              },
+              {
+                "name": "Our Services",
+                "href": "/services"
+              },
+              {
+                "name": "Our Portfolio",
+                "href": "/portfolio"
+              },
+              {
+                "name": "Get A Quote",
+                "href": "/quote"
+              },
+              {
+                "name": "Blog",
+                "href": "/blog"
+              },
+              {
+                "name": "Contact Us",
+                "href": "/contact"
+              }
+            ],
+            "services": [
+              {
+                "name": "Accounting & Bookkeeping",
+                "href": "/servicedetails?service=accounting-bookkeeping"
+              },
+              {
+                "name": "Tax Planning & Compliance",
+                "href": "/servicedetails?service=tax-planning"
+              },
+              {
+                "name": "Audit & Assurance",
+                "href": "/servicedetails?service=audit-assurance"
+              },
+              {
+                "name": "Business Advisory",
+                "href": "/servicedetails?service=business-advisory"
+              },
+              {
+                "name": "Company Formation",
+                "href": "/servicedetails?service=company-formation"
+              },
+              {
+                "name": "Payroll Services",
+                "href": "/servicedetails?service=payroll-services"
+              },
+              {
+                "name": "Financial Reporting",
+                "href": "/servicedetails?service=financial-reporting"
+              }
+            ],
+            "bottomText": "© 2026 All Rights Reserved. Powred By Lestow",
+            "bottomLinks": [
+              {
+                "name": "Thank You",
+                "href": "/thankyou"
+              }
+            ],
+            "contacts": [
+              {
+                "icon": "FaMapMarkerAlt",
+                "lines": [
+                  "123 Business Avenue,",
+                  "New York, USA"
+                ]
+              },
+              {
+                "icon": "FaPhoneAlt",
+                "lines": [
+                  "+1 0000000000",
+                  "+1 0000000000"
+                ]
+              },
+              {
+                "icon": "FaEnvelope",
+                "lines": [
+                  "dummy@xyz.com",
+                  "dummy@abc.com"
+                ]
+              },
+              {
+                "icon": "FaClock",
+                "lines": [
+                  "Mon - Fri: 9:00 AM - 6:00 PM",
+                  "Sat: 9:00 AM - 1:00 PM"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "WhyChooseUs": {
+        "variants": {
+          "LedgerWhyChoose1": {
+            "badge": "Why Choose Us?",
+            "titlePrefix": "The Smart Way To Grow",
+            "titleHighlight": "Your Business",
+            "description": "We provide expert guidance, practical solutions and dedicated support to help your business stay compliant, efficient and financially strong.",
+            "features": [
+              {
+                "title": "Experienced Professionals",
+                "text": "A skilled team with deep industry knowledge.",
+                "icon": "HiOutlineUserGroup"
+              },
+              {
+                "title": "Tailored Solutions",
+                "text": "Customized strategies to meet your unique goals.",
+                "icon": "HiOutlineCog6Tooth"
+              },
+              {
+                "title": "Transparent Process",
+                "text": "Clear communication and complete compliance.",
+                "icon": "HiOutlineShieldCheck"
+              },
+              {
+                "title": "Long-Term Partnership",
+                "text": "We grow with you, beyond just numbers.",
+                "icon": "HiOutlineChartBar"
+              }
+            ],
+            "image": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=80"
+          }
+        }
+      },
+      "PortfolioSec": {
+        "variants": {
+          "LedgerPortfolio1": {
+            "projects": [
+              {
+                "category": "Accounting",
+                "title": "Retail Business Accounting",
+                "text": "Streamlined bookkeeping and financial reporting for a growing retail brand, helping them improve accuracy, save time and make better business decisions.",
+                "img": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80"
+              },
+              {
+                "category": "Tax Planning",
+                "title": "Tax Planning for SMEs",
+                "text": "Developed a customized tax strategy to reduce liabilities and improve cash flow for a small and medium-sized enterprise in the manufacturing sector.",
+                "img": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80"
+              },
+              {
+                "category": "Financial Reporting",
+                "title": "Financial Reporting Setup",
+                "text": "Implemented a clear and accurate financial reporting system for a manufacturing company, enabling timely insights and better decision-making.",
+                "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+              },
+              {
+                "category": "Business Advisory",
+                "title": "Startup Fund Advisory",
+                "text": "Provided financial guidance to help a tech startup secure investment and build a strong foundation for growth.",
+                "img": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80"
+              },
+              {
+                "category": "Company Formation",
+                "title": "Company Formation Support",
+                "text": "Assisted in complete company setup, including legal documentation, compliance and financial structuring for a new business.",
+                "img": "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80"
+              },
+              {
+                "category": "Payroll Services",
+                "title": "Payroll System Implementation",
+                "text": "Set up a streamlined payroll process for an established service-based company, improving accuracy and reducing administrative workload.",
+                "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+              },
+              {
+                "category": "Audit & Compliance",
+                "title": "Audit & Compliance Support",
+                "text": "Ensured full regulatory compliance through detailed audits and reporting for a multi-location business.",
+                "img": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=800&q=80"
+              },
+              {
+                "category": "Business Growth",
+                "title": "Strategic Growth Advisory",
+                "text": "Delivered strategic advisory services to support business expansion and long-term success in a competitive market.",
+                "img": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=800&q=80"
+              },
+              {
+                "category": "Ongoing Bookkeeping",
+                "title": "Ongoing Bookkeeping Services",
+                "text": "Provided consistent bookkeeping support to improve accuracy, financial visibility and operational efficiency for a growing business.",
+                "img": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80"
+              }
+            ]
+          }
+        }
+      },
+      "QuoteSec": {
+        "variants": {
+          "LedgerQuote1": {
+            "badge": "Get a quote",
+            "title": "Let's Find the Right Solution for Your Business",
+            "description": "Tell us about your requirements and our team will get back to you with a tailored quote. We provide transparent pricing and customized solutions based on your business needs.",
+            "features": [
+              {
+                "icon": "FiUsers",
+                "title": "Expert Consultation",
+                "text": "Get advice from our experienced professionals."
+              },
+              {
+                "icon": "FiFileText",
+                "title": "Tailored Solutions",
+                "text": "Customized services to match your business goals."
+              },
+              {
+                "icon": "FiShield",
+                "title": "Transparent Pricing",
+                "text": "Clear and upfront quotes with no hidden costs."
+              },
+              {
+                "icon": "FiHeadphones",
+                "title": "Dedicated Support",
+                "text": "We're here to assist you at every step."
+              }
+            ],
+            "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80",
+            "imageText": "Partner with us for reliable financial guidance and grow your business with confidence.",
+            "formTitle": "Request a Quote",
+            "formSubtitle": "Fill out the form below and we'll get back to you shortly with a personalized quote.",
+            "formServices": [
+              "Accounting & Bookkeeping",
+              "Tax Planning",
+              "Business Advisory",
+              "Audit & Assurance",
+              "Payroll Services"
+            ]
+          }
+        }
+      },
+      "ContactSec": {
+        "variants": {
+          "LedgerContact1": {
+            "badge": "Get in touch",
+            "title": "We're Here to Help",
+            "description": "Have a question or need professional advice? Fill out the form and our team will get back to you as soon as possible.",
+            "info": [
+              {
+                "icon": "FiMapPin",
+                "title": "Our Office Location",
+                "lines": [
+                  "123 Business Avenue,",
+                  "Suite 456, New York, NY 10001, USA"
+                ]
+              },
+              {
+                "icon": "FiPhone",
+                "title": "Phone Number",
+                "lines": [
+                  "+1 234 567 8900",
+                  "+1 234 567 8901"
+                ]
+              },
+              {
+                "icon": "FiMail",
+                "title": "Email Address",
+                "lines": [
+                  "info@ledgerco.com",
+                  "support@ledgerco.com"
+                ]
+              },
+              {
+                "icon": "FiClock",
+                "title": "Working Hours",
+                "lines": [
+                  "Monday - Friday: 9:00 AM - 6:00 PM",
+                  "Saturday - Sunday: Closed"
+                ]
+              }
+            ],
+            "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+            "formServices": [
+              "Accounting & Bookkeeping",
+              "Tax Planning",
+              "Business Advisory",
+              "Audit & Assurance",
+              "Payroll Services"
+            ],
+            "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224356.85923192592!2d77.23701088488971!3d28.522404036526275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1786345160037!5m2!1sen!2sin"
+          }
+        }
+      },
+      "ThankYouSec": {
+        "variants": {
+          "LedgerThankYou1": {
+            "title": "Thank You!",
+            "subtitle": "Your request has been submitted successfully.",
+            "description": "We have received your information and our team will get back to you shortly. Meanwhile, feel free to reach out to us if you have any queries.",
+            "buttonText": "Back to Home",
+            "buttonHref": "/"
+          }
+        }
+      },
+      "ServiceDetails": {
+        "variants": {
+          "accounting-bookkeeping": {
+            "overview": {
+              "title": "Accounting & Bookkeeping",
+              "paragraphs": [
+                "Our accounting and bookkeeping services help businesses maintain accurate financial records, ensure compliance and gain clear insights into their financial performance.",
+                "We handle your day-to-day financial transactions so you can focus on what you do best — growing your business."
+              ],
+              "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80"
+            },
+            "keyBenefits": {
+              "title": "Key Benefits",
+              "benefits": [
+                { "icon": "FiFileText", "title": "Accurate Financial Records", "text": "Keep your books organized and error-free." },
+                { "icon": "FiTrendingUp", "title": "Better Financial Decisions", "text": "Gain clear insights into your business performance." },
+                { "icon": "FiShield", "title": "Ensure Compliance", "text": "Stay compliant with statutory requirements." },
+                { "icon": "FiClock", "title": "Save Time & Resources", "text": "Let our experts handle the numbers while you focus on growth." }
+              ]
+            },
+            "process": {
+              "title": "Our Process",
+              "subtitle": "A simple and transparent approach to manage your accounting and bookkeeping needs.",
+              "steps": [
+                { "icon": "FiFileText", "num": "01", "title": "Understand Your Business", "text": "We learn about your business and financial requirements." },
+                { "icon": "FiSettings", "num": "02", "title": "Set Up & Organize", "text": "We set up your accounting system and organize records." },
+                { "icon": "FiTrendingUp", "num": "03", "title": "Ongoing Management", "text": "We handle day-to-day bookkeeping and ensure accuracy." },
+                { "icon": "FiShield", "num": "04", "title": "Review & Support", "text": "We provide regular reports and expert guidance for better decisions." }
+              ]
+            },
+            "sidebar": {
+              "servicesTitle": "Our Services",
+              "formTitle": "Get a Free Consultation",
+              "formSubtitle": "Have questions? Get in touch with our experts today.",
+              "formFields": [
+                { "name": "name", "placeholder": "Your Name", "icon": "FiUser", "type": "text" },
+                { "name": "email", "placeholder": "Your Email", "icon": "FiMail", "type": "email" },
+                { "name": "phone", "placeholder": "Phone Number", "icon": "FiPhone", "type": "tel" }
+              ],
+              "buttonText": "Submit Enquiry"
+            }
+          },
+          "tax-planning": {
+            "overview": {
+              "title": "Tax Planning & Compliance",
+                "paragraphs": [
+                "Our accounting and bookkeeping services help businesses maintain accurate financial records, ensure compliance and gain clear insights into their financial performance.",
+                "We handle your day-to-day financial transactions so you can focus on what you do best — growing your business."
+              ],
+              "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80"
+            },
+            "keyBenefits": {
+              "title": "Key Benefits",
+              "benefits": [
+                { "icon": "FiShield", "title": "Minimize Tax", "text": "Legal strategies to reduce tax liabilities." },
+                { "icon": "FiFileText", "title": "Full Compliance", "text": "Timely filing of all tax returns." },
+                { "icon": "FiTrendingUp", "title": "Better Planning", "text": "Forecast future tax obligations." },
+                { "icon": "FiClock", "title": "Avoid Penalties", "text": "Stay ahead of deadlines easily." }
+              ]
+            },
+            "process": {
+              "title": "Our Process",
+              "subtitle": "A strategic approach to your taxes.",
+              "steps": [
+                { "icon": "FiFileText", "num": "01", "title": "Assess", "text": "Evaluate current tax position." },
+                { "icon": "FiSettings", "num": "02", "title": "Plan", "text": "Develop customized tax strategy." },
+                { "icon": "FiTrendingUp", "num": "03", "title": "Optimize", "text": "Implement tax saving strategies." },
+                { "icon": "FiShield", "num": "04", "title": "Review", "text": "Continuous monitoring and support." }
+              ]
+            },
+            "sidebar": {
+              "servicesTitle": "Our Services",
+              "formTitle": "Get a Free Consultation",
+              "formSubtitle": "Have questions? Get in touch with our experts today.",
+              "formFields": [
+                { "name": "name", "placeholder": "Your Name", "icon": "FiUser", "type": "text" },
+                { "name": "email", "placeholder": "Your Email", "icon": "FiMail", "type": "email" },
+                { "name": "phone", "placeholder": "Phone Number", "icon": "FiPhone", "type": "tel" }
+              ],
+              "buttonText": "Submit Enquiry"
+            }
+          },
+          "business-advisory": {
+            "overview": {
+              "title": "Business Advisory Management",
+                "paragraphs": [
+                "Our accounting and bookkeeping services help businesses maintain accurate financial records, ensure compliance and gain clear insights into their financial performance.",
+                "We handle your day-to-day financial transactions so you can focus on what you do best — growing your business."
+              ],
+              "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+            },
+            "keyBenefits": {
+              "title": "Key Benefits",
+              "benefits": [
+                { "icon": "FiTrendingUp", "title": "Growth Strategy", "text": "Clear roadmaps for expansion." },
+                { "icon": "FiSettings", "title": "Efficiency", "text": "Streamlined operations for better margins." },
+                { "icon": "FiUsers", "title": "Expert Advice", "text": "Access to experienced industry leaders." },
+                { "icon": "FiShield", "title": "Risk Management", "text": "Identify and mitigate potential risks." }
+              ]
+            },
+            "process": {
+              "title": "Our Process",
+              "subtitle": "Advising for a better future.",
+              "steps": [
+                { "icon": "FiUsers", "num": "01", "title": "Consult", "text": "Deep dive into your business." },
+                { "icon": "FiFileText", "num": "02", "title": "Analyze", "text": "Identify strengths and weaknesses." },
+                { "icon": "FiSettings", "num": "03", "title": "Strategize", "text": "Develop actionable plans." },
+                { "icon": "FiTrendingUp", "num": "04", "title": "Execute", "text": "Put plans into motion." }
+              ]
+            },
+            "sidebar": {
+              "servicesTitle": "Our Services",
+              "formTitle": "Get a Free Consultation",
+              "formSubtitle": "Have questions? Get in touch with our experts today.",
+              "formFields": [
+                { "name": "name", "placeholder": "Your Name", "icon": "FiUser", "type": "text" },
+                { "name": "email", "placeholder": "Your Email", "icon": "FiMail", "type": "email" },
+                { "name": "phone", "placeholder": "Phone Number", "icon": "FiPhone", "type": "tel" }
+              ],
+              "buttonText": "Submit Enquiry"
+            }
+          },
+          "regulatory-compliance": {
+            "overview": {
+              "title": "Regulatory & Compliance",
+                "paragraphs": [
+                "Our accounting and bookkeeping services help businesses maintain accurate financial records, ensure compliance and gain clear insights into their financial performance.",
+                "We handle your day-to-day financial transactions so you can focus on what you do best — growing your business."
+              ],
+              "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80"
+            },
+            "keyBenefits": {
+              "title": "Key Benefits",
+              "benefits": [
+                { "icon": "FiShield", "title": "Risk Free", "text": "Avoid penalties and legal issues." },
+                { "icon": "FiClock", "title": "Timely Updates", "text": "Always ahead of regulatory changes." },
+                { "icon": "FiFileText", "title": "Comprehensive", "text": "Covering all statutory needs." },
+                { "icon": "FiSettings", "title": "Peace of Mind", "text": "Focus on business, not paperwork." }
+              ]
+            },
+            "process": {
+              "title": "Our Process",
+              "subtitle": "Keeping you compliant always.",
+              "steps": [
+                { "icon": "FiShield", "num": "01", "title": "Audit", "text": "Review current compliance." },
+                { "icon": "FiFileText", "num": "02", "title": "Identify", "text": "Find compliance gaps." },
+                { "icon": "FiSettings", "num": "03", "title": "Align", "text": "Fix gaps and ensure adherence." },
+                { "icon": "FiTrendingUp", "num": "04", "title": "Monitor", "text": "Ongoing compliance tracking." }
+              ]
+            },
+            "sidebar": {
+              "servicesTitle": "Our Services",
+              "formTitle": "Get a Free Consultation",
+              "formSubtitle": "Have questions? Get in touch with our experts today.",
+              "formFields": [
+                { "name": "name", "placeholder": "Your Name", "icon": "FiUser", "type": "text" },
+                { "name": "email", "placeholder": "Your Email", "icon": "FiMail", "type": "email" },
+                { "name": "phone", "placeholder": "Phone Number", "icon": "FiPhone", "type": "tel" }
+              ],
+              "buttonText": "Submit Enquiry"
+            }
+          },
+          "audit-assurance": {
+            "overview": {
+              "title": "Audit & Assurance",
+                 "paragraphs": [
+                "Our accounting and bookkeeping services help businesses maintain accurate financial records, ensure compliance and gain clear insights into their financial performance.",
+                "We handle your day-to-day financial transactions so you can focus on what you do best — growing your business."
+              ],
+              "image": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=800&q=80"
+            },
+            "keyBenefits": {
+              "title": "Key Benefits",
+              "benefits": [
+                { "icon": "FiFileText", "title": "Trust", "text": "Build investor and stakeholder confidence." },
+                { "icon": "FiShield", "title": "Accuracy", "text": "Ensure books are 100% accurate." },
+                { "icon": "FiTrendingUp", "title": "Transparency", "text": "Clear financial standing." },
+                { "icon": "FiSettings", "title": "Control", "text": "Improve internal financial controls." }
+              ]
+            },
+            "process": {
+              "title": "Our Process",
+              "subtitle": "Meticulous auditing methodology.",
+              "steps": [
+                { "icon": "FiSettings", "num": "01", "title": "Plan", "text": "Define audit scope and timing." },
+                { "icon": "FiFileText", "num": "02", "title": "Fieldwork", "text": "Gathering necessary evidence." },
+                { "icon": "FiShield", "num": "03", "title": "Evaluate", "text": "Assess financial data." },
+                { "icon": "FiTrendingUp", "num": "04", "title": "Report", "text": "Deliver findings and assurance." }
+              ]
+            },
+            "sidebar": {
+              "servicesTitle": "Our Services",
+              "formTitle": "Get a Free Consultation",
+              "formSubtitle": "Have questions? Get in touch with our experts today.",
+              "formFields": [
+                { "name": "name", "placeholder": "Your Name", "icon": "FiUser", "type": "text" },
+                { "name": "email", "placeholder": "Your Email", "icon": "FiMail", "type": "email" },
+                { "name": "phone", "placeholder": "Phone Number", "icon": "FiPhone", "type": "tel" }
+              ],
+              "buttonText": "Submit Enquiry"
+            }
+          },
+          "payroll-services": {
+            "overview": {
+              "title": "Payroll Services",
+                "paragraphs": [
+                "Our accounting and bookkeeping services help businesses maintain accurate financial records, ensure compliance and gain clear insights into their financial performance.",
+                "We handle your day-to-day financial transactions so you can focus on what you do best — growing your business."
+              ],
+              "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80"
+            },
+            "keyBenefits": {
+              "title": "Key Benefits",
+              "benefits": [
+                { "icon": "FiUsers", "title": "Happy Team", "text": "On-time and accurate salaries." },
+                { "icon": "FiShield", "title": "Compliant", "text": "All deductions handled legally." },
+                { "icon": "FiClock", "title": "Time Saving", "text": "Automated payroll processing." },
+                { "icon": "FiFileText", "title": "Clear Reporting", "text": "Detailed payslips and summaries." }
+              ]
+            },
+            "process": {
+              "title": "Our Process",
+              "subtitle": "Seamless payroll management.",
+              "steps": [
+                { "icon": "FiSettings", "num": "01", "title": "Setup", "text": "Configure employee data." },
+                { "icon": "FiClock", "num": "02", "title": "Track", "text": "Monitor time and attendance." },
+                { "icon": "FiFileText", "num": "03", "title": "Process", "text": "Monthly payroll generation." },
+                { "icon": "FiShield", "num": "04", "title": "Disburse", "text": "Timely salary distribution." }
+              ]
+            },
+            "sidebar": {
+              "servicesTitle": "Our Services",
+              "formTitle": "Get a Free Consultation",
+              "formSubtitle": "Have questions? Get in touch with our experts today.",
+              "formFields": [
+                { "name": "name", "placeholder": "Your Name", "icon": "FiUser", "type": "text" },
+                { "name": "email", "placeholder": "Your Email", "icon": "FiMail", "type": "email" },
+                { "name": "phone", "placeholder": "Phone Number", "icon": "FiPhone", "type": "tel" }
+              ],
+              "buttonText": "Submit Enquiry"
+            }
+          },
+          "company-registration": {
+            "overview": {
+              "title": "Company Registration",
+               "paragraphs": [
+                "Our accounting and bookkeeping services help businesses maintain accurate financial records, ensure compliance and gain clear insights into their financial performance.",
+                "We handle your day-to-day financial transactions so you can focus on what you do best — growing your business."
+              ],
+              "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80"
+            },
+            "keyBenefits": {
+              "title": "Key Benefits",
+              "benefits": [
+                { "icon": "FiTrendingUp", "title": "Fast Launch", "text": "Quick incorporation process." },
+                { "icon": "FiShield", "title": "Legal Safety", "text": "Correct entity structure chosen." },
+                { "icon": "FiFileText", "title": "Documentation", "text": "All paperwork handled by us." },
+                { "icon": "FiSettings", "title": "Turnkey Solution", "text": "Ready to operate from day one." }
+              ]
+            },
+            "process": {
+              "title": "Our Process",
+              "subtitle": "From idea to registered entity.",
+              "steps": [
+                { "icon": "FiUsers", "num": "01", "title": "Consult", "text": "Decide company type." },
+                { "icon": "FiFileText", "num": "02", "title": "Prepare", "text": "Draft necessary documents." },
+                { "icon": "FiShield", "num": "03", "title": "File", "text": "Submit to relevant authorities." },
+                { "icon": "FiTrendingUp", "num": "04", "title": "Register", "text": "Obtain certificates and IDs." }
+              ]
+            },
+            "sidebar": {
+              "servicesTitle": "Our Services",
+              "formTitle": "Get a Free Consultation",
+              "formSubtitle": "Have questions? Get in touch with our experts today.",
+              "formFields": [
+                { "name": "name", "placeholder": "Your Name", "icon": "FiUser", "type": "text" },
+                { "name": "email", "placeholder": "Your Email", "icon": "FiMail", "type": "email" },
+                { "name": "phone", "placeholder": "Phone Number", "icon": "FiPhone", "type": "tel" }
+              ],
+              "buttonText": "Submit Enquiry"
+            }
+          },
+          "financial-reporting": {
+            "overview": {
+              "title": "Financial Reporting",
+              "paragraphs": [
+                "Detailed and accurate financial reports to give you complete visibility and control over your business performance.",
+                "Make decisions based on hard data and clear financial visualizations."
+              ],
+              "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+            },
+            "keyBenefits": {
+              "title": "Key Benefits",
+              "benefits": [
+                { "icon": "FiFileText", "title": "Clarity", "text": "Clear view of financial health." },
+                { "icon": "FiTrendingUp", "title": "Forecasting", "text": "Plan for future growth accurately." },
+                { "icon": "FiShield", "title": "Compliance", "text": "Meet reporting standards." },
+                { "icon": "FiSettings", "title": "Customized", "text": "Reports tailored to your needs." }
+              ]
+            },
+            "process": {
+              "title": "Our Process",
+              "subtitle": "Transforming data into insights.",
+              "steps": [
+                { "icon": "FiSettings", "num": "01", "title": "Collect", "text": "Gather financial data." },
+                { "icon": "FiFileText", "num": "02", "title": "Process", "text": "Clean and organize data." },
+                { "icon": "FiTrendingUp", "num": "03", "title": "Analyze", "text": "Extract meaningful metrics." },
+                { "icon": "FiShield", "num": "04", "title": "Report", "text": "Generate comprehensive reports." }
+              ]
+            },
+            "sidebar": {
+              "servicesTitle": "Our Services",
+              "formTitle": "Get a Free Consultation",
+              "formSubtitle": "Have questions? Get in touch with our experts today.",
+              "formFields": [
+                { "name": "name", "placeholder": "Your Name", "icon": "FiUser", "type": "text" },
+                { "name": "email", "placeholder": "Your Email", "icon": "FiMail", "type": "email" },
+                { "name": "phone", "placeholder": "Phone Number", "icon": "FiPhone", "type": "tel" }
+              ],
+              "buttonText": "Submit Enquiry"
+            }
+          }
+        }
+      },
+      "BlogDetails": {
+        "variants": {
+          "accurate-bookkeeping": {
+            "title": "Why Accurate Bookkeeping Is Essential for Business Growth",
+            "date": "August 25, 2024",
+            "category": "Accounting",
+            "readTime": "5 Min Read",
+            "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80",
+            "content": {
+              "paragraphs": [
+                "Starting a new business is an exciting journey, but it also comes with its fair share of challenges. Professional business consultation helps new ventures make informed decisions, build strong financial foundations, and achieve sustainable growth.",
+                "Business consultants bring industry expertise and an external perspective that can help identify opportunities, mitigate risks, and streamline operations. With the right guidance, new businesses can avoid common pitfalls and focus on long-term success."
+              ],
+              "blockquote": {
+                "text": "A well-structured consultation can provide clarity, direction, and the right strategies to help new ventures grow with confidence.",
+                "author": "Mark Johnson"
+              },
+              "sections": [
+                {
+                  "title": "1. Strategic Planning",
+                  "text": "Consultants help you define clear goals, analyze market opportunities, and create a roadmap for growth. This ensures your business is well-prepared for both short-term milestones and long-term success."
+                },
+                {
+                  "title": "2. Financial Management",
+                  "text": "From budgeting and cash flow management to tax planning, expert advice helps you maintain financial stability and make data-driven decisions."
+                },
+                {
+                  "title": "3. Risk Mitigation",
+                  "text": "With industry insights and experience, consultants can identify potential risks early and implement strategies to minimize their impact on your business."
+                },
+                {
+                  "title": "4. Operational Efficiency",
+                  "text": "By optimizing processes and resources, consultants help you improve productivity, reduce costs, and build a stronger, more scalable business model."
+                }
+              ]
+            },
+            "sidebar": {
+              "recentPostsTitle": "Recent Posts",
+              "categoriesTitle": "Categories",
+              "categories": [
+                { "name": "Accounting & Bookkeeping", "count": 5 },
+                { "name": "Tax Planning", "count": 8 },
+                { "name": "Business Advisory", "count": 6 },
+                { "name": "Audit & Assurance", "count": 4 },
+                { "name": "Financial Reporting", "count": 5 },
+                { "name": "Company Formation", "count": 3 }
+              ],
+              "cta": {
+                "title": "Need Professional Guidance?",
+                "text": "Get expert advice for your business finance and taxation needs.",
+                "buttonText": "Contact Us",
+                "buttonHref": "/contact"
+              }
+            }
+          },
+          "tax-planning-strategies": {
+            "title": "Smart Tax Planning Strategies for Small Businesses",
+            "date": "August 21, 2024",
+            "category": "Tax Planning",
+            "readTime": "6 Min Read",
+            "image": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=900&q=80",
+            "content": {
+              "paragraphs": [
+                "Effective tax planning is essential for any small business looking to maximize profitability and stay compliant with the law. By understanding the tax landscape, you can implement strategies that save money and reduce stress during tax season.",
+                "Our experts break down the most effective tax-saving strategies, helping you navigate deductions, credits, and changing regulations with confidence."
+              ],
+              "blockquote": {
+                "text": "Proactive tax planning is not just about saving money; it's about making strategic decisions that fuel business growth.",
+                "author": "Sarah Williams"
+              },
+              "sections": [
+                {
+                  "title": "1. Understand Your Deductions",
+                  "text": "Familiarize yourself with eligible business expenses to ensure you aren't leaving money on the table."
+                },
+                {
+                  "title": "2. Choose the Right Entity",
+                  "text": "Your business structure significantly impacts your tax liability. Ensure you are registered appropriately."
+                },
+                {
+                  "title": "3. Keep Impeccable Records",
+                  "text": "Accurate record-keeping is the foundation of good tax planning and defense in case of an audit."
+                },
+                {
+                  "title": "4. Plan for the Future",
+                  "text": "Implement retirement plans and other tax-advantaged accounts to benefit both you and your employees."
+                }
+              ]
+            },
+            "sidebar": {
+              "recentPostsTitle": "Recent Posts",
+              "categoriesTitle": "Categories",
+              "categories": [
+                { "name": "Accounting & Bookkeeping", "count": 5 },
+                { "name": "Tax Planning", "count": 8 },
+                { "name": "Business Advisory", "count": 6 },
+                { "name": "Audit & Assurance", "count": 4 },
+                { "name": "Financial Reporting", "count": 5 },
+                { "name": "Company Formation", "count": 3 }
+              ],
+              "cta": {
+                "title": "Need Professional Guidance?",
+                "text": "Get expert advice for your business finance and taxation needs.",
+                "buttonText": "Contact Us",
+                "buttonHref": "/contact"
+              }
+            }
+          },
+          "improve-profitability": {
+            "title": "5 Financial Tips to Improve Your Business Profitability",
+            "date": "August 20, 2024",
+            "category": "Business Growth",
+            "readTime": "4 Min Read",
+            "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
+            "content": {
+              "paragraphs": [
+                "Improving profitability is the primary goal of any business. While increasing sales is important, optimizing your financial strategies can often yield quicker and more sustainable results.",
+                "Here are five actionable financial tips that can help you streamline operations, reduce unnecessary costs, and boost your bottom line."
+              ],
+              "blockquote": {
+                "text": "Profitability is not just about making more; it's about managing what you have with maximum efficiency.",
+                "author": "David Chen"
+              },
+              "sections": [
+                {
+                  "title": "1. Review Pricing Strategies",
+                  "text": "Regularly assess your pricing to ensure it reflects the true value of your products or services."
+                },
+                {
+                  "title": "2. Control Operating Costs",
+                  "text": "Identify and eliminate wasteful spending without compromising on quality or employee satisfaction."
+                },
+                {
+                  "title": "3. Improve Cash Flow Management",
+                  "text": "Ensure timely invoicing and follow-ups to maintain a healthy cash flow."
+                },
+                {
+                  "title": "4. Leverage Technology",
+                  "text": "Invest in financial software to automate tasks and gain real-time insights into your finances."
+                }
+              ]
+            },
+            "sidebar": {
+              "recentPostsTitle": "Recent Posts",
+              "categoriesTitle": "Categories",
+              "categories": [
+                { "name": "Accounting & Bookkeeping", "count": 5 },
+                { "name": "Tax Planning", "count": 8 },
+                { "name": "Business Advisory", "count": 6 },
+                { "name": "Audit & Assurance", "count": 4 },
+                { "name": "Financial Reporting", "count": 5 },
+                { "name": "Company Formation", "count": 3 }
+              ],
+              "cta": {
+                "title": "Need Professional Guidance?",
+                "text": "Get expert advice for your business finance and taxation needs.",
+                "buttonText": "Contact Us",
+                "buttonHref": "/contact"
+              }
+            }
+          },
+          "importance-of-audits": {
+            "title": "Understanding the Importance of Regular Financial Audits",
+            "date": "August 15, 2024",
+            "category": "Audit & Assurance",
+            "readTime": "5 Min Read",
+            "image": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=900&q=80",
+            "content": {
+              "paragraphs": [
+                "Financial audits are often viewed as a stressful obligation, but they are actually a powerful tool for business improvement. A thorough audit provides an objective assessment of your financial health.",
+                "By embracing regular audits, you can identify inefficiencies, prevent fraud, and build trust with investors and stakeholders."
+              ],
+              "blockquote": {
+                "text": "An audit is not a test to pass; it's a diagnostic tool to make your business stronger.",
+                "author": "Emily Carter"
+              },
+              "sections": [
+                {
+                  "title": "1. Enhance Credibility",
+                  "text": "Audited financial statements provide assurance to lenders, investors, and partners regarding your business's stability."
+                },
+                {
+                  "title": "2. Fraud Detection",
+                  "text": "Regular audits are essential for identifying and preventing fraudulent activities within your organization."
+                },
+                {
+                  "title": "3. Process Improvement",
+                  "text": "Auditors often provide valuable recommendations to improve internal controls and operational efficiency."
+                },
+                {
+                  "title": "4. Regulatory Compliance",
+                  "text": "Ensure that your business adheres to all relevant laws and industry standards, avoiding costly penalties."
+                }
+              ]
+            },
+            "sidebar": {
+              "recentPostsTitle": "Recent Posts",
+              "categoriesTitle": "Categories",
+              "categories": [
+                { "name": "Accounting & Bookkeeping", "count": 5 },
+                { "name": "Tax Planning", "count": 8 },
+                { "name": "Business Advisory", "count": 6 },
+                { "name": "Audit & Assurance", "count": 4 },
+                { "name": "Financial Reporting", "count": 5 },
+                { "name": "Company Formation", "count": 3 }
+              ],
+              "cta": {
+                "title": "Need Professional Guidance?",
+                "text": "Get expert advice for your business finance and taxation needs.",
+                "buttonText": "Contact Us",
+                "buttonHref": "/contact"
+              }
+            }
+          },
+          "company-formation-guide": {
+            "title": "A Guide to Company Formation and Legal Structures",
+            "date": "August 10, 2024",
+            "category": "Company Setup",
+            "readTime": "7 Min Read",
+            "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80",
+            "content": {
+              "paragraphs": [
+                "Choosing the right legal structure is one of the most critical decisions you will make when starting a business. It affects your taxes, personal liability, and ability to raise capital.",
+                "This guide explores the various options available, from sole proprietorships to corporations, helping you make an informed choice."
+              ],
+              "blockquote": {
+                "text": "The foundation of a successful business starts with choosing the right legal structure from day one.",
+                "author": "Robert Thompson"
+              },
+              "sections": [
+                {
+                  "title": "1. Sole Proprietorship",
+                  "text": "The simplest structure, offering complete control but exposing the owner to unlimited personal liability."
+                },
+                {
+                  "title": "2. Partnerships",
+                  "text": "Ideal for businesses with multiple owners, offering shared responsibility and pass-through taxation."
+                },
+                {
+                  "title": "3. Limited Liability Company (LLC)",
+                  "text": "Provides liability protection for owners while offering flexibility in management and taxation."
+                },
+                {
+                  "title": "4. Corporations",
+                  "text": "Best for businesses seeking external investment, offering strong liability protection but subject to corporate taxes."
+                }
+              ]
+            },
+            "sidebar": {
+              "recentPostsTitle": "Recent Posts",
+              "categoriesTitle": "Categories",
+              "categories": [
+                { "name": "Accounting & Bookkeeping", "count": 5 },
+                { "name": "Tax Planning", "count": 8 },
+                { "name": "Business Advisory", "count": 6 },
+                { "name": "Audit & Assurance", "count": 4 },
+                { "name": "Financial Reporting", "count": 5 },
+                { "name": "Company Formation", "count": 3 }
+              ],
+              "cta": {
+                "title": "Need Professional Guidance?",
+                "text": "Get expert advice for your business finance and taxation needs.",
+                "buttonText": "Contact Us",
+                "buttonHref": "/contact"
+              }
+            }
+          },
+          "simplifying-payroll": {
+            "title": "Simplifying Payroll Management for Expanding Teams",
+            "date": "August 05, 2024",
+            "category": "Payroll",
+            "readTime": "4 Min Read",
+            "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80",
+            "content": {
+              "paragraphs": [
+                "As your business grows and you hire more employees, managing payroll becomes increasingly complex. Ensuring accurate and timely payments while maintaining compliance is crucial for employee satisfaction.",
+                "Discover strategies and tools that can help you streamline payroll processes and focus on core business activities."
+              ],
+              "blockquote": {
+                "text": "Efficient payroll management is not just about compliance; it's about valuing your employees' time and effort.",
+                "author": "Michael Lee"
+              },
+              "sections": [
+                {
+                  "title": "1. Automate Processes",
+                  "text": "Utilize payroll software to automate calculations, deductions, and tax filings, reducing the risk of human error."
+                },
+                {
+                  "title": "2. Standardize Policies",
+                  "text": "Establish clear policies regarding overtime, leave, and benefits to ensure consistency and transparency."
+                },
+                {
+                  "title": "3. Stay Compliant",
+                  "text": "Keep abreast of labor laws and tax regulations to avoid penalties and legal complications."
+                },
+                {
+                  "title": "4. Outsource When Necessary",
+                  "text": "Consider outsourcing payroll to experts if managing it internally becomes too burdensome for your team."
+                }
+              ]
+            },
+            "sidebar": {
+              "recentPostsTitle": "Recent Posts",
+              "categoriesTitle": "Categories",
+              "categories": [
+                { "name": "Accounting & Bookkeeping", "count": 5 },
+                { "name": "Tax Planning", "count": 8 },
+                { "name": "Business Advisory", "count": 6 },
+                { "name": "Audit & Assurance", "count": 4 },
+                { "name": "Financial Reporting", "count": 5 },
+                { "name": "Company Formation", "count": 3 }
+              ],
+              "cta": {
+                "title": "Need Professional Guidance?",
+                "text": "Get expert advice for your business finance and taxation needs.",
+                "buttonText": "Contact Us",
+                "buttonHref": "/contact"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
