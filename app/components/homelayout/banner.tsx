@@ -9,7 +9,7 @@ export default function Banner() {
   const data = site.banner;
 
   return (
-    <section className="relative flex min-h-[100vh] lg:min-h-[100vh] items-center lg:items-end overflow-hidden bg-[#07110f] text-white">
+    <section className="relative flex min-h-[100vh] lg:min-h-[100vh] items-center lg:items-center overflow-hidden bg-[#07110f] text-white">
       {/* Background image */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
@@ -27,7 +27,7 @@ export default function Banner() {
         initial={{ opacity: 0, y: 30 }} 
         animate={{ opacity: 1, y: 0 }} 
         transition={{ duration: 0.8 }} 
-        className="relative z-10 mx-auto w-full max-w-[1320px] px-4 pt-24 pb-12 sm:pt-32 sm:px-6 lg:px-8 lg:pb-8 lg:pt-0"
+        className="relative z-10 mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8 mt-22 sm:mt-28 md:mt-36 lg:mt-46 xl:mt-42"
       >
         <div className="flex items-center gap-5">
           <span className="h-[2px] w-14 bg-[#d4a24c]" />
