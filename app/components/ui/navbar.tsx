@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HiArrowLongRight } from "react-icons/hi2";
@@ -10,12 +10,19 @@ import { site } from "@/data/index";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("Home");
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const data = site.navbar;
   const brand = site.brand;
 
   return (
-    <header className="absolute inset-x-0 top-0 md:top-[66px] z-30 text-white">
+    <header className={`fixed inset-x-0 top-0 md:top-[66px] z-40 text-white transition-colors duration-300 ${scrolled ? "bg-[#07110f] shadow-lg" : "bg-transparent"}`}>
       <div className="mx-auto flex h-[100px] max-w-[1320px] items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="shrink-0">

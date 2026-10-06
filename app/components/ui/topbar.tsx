@@ -1,12 +1,23 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { site } from "@/data/index";
 import { iconMap } from "@/app/components/iconMap";
 
 export default function Topbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const data = site.topbar;
   const brand = site.brand;
 
   return (
-    <div className="absolute inset-x-0 top-0 z-40 hidden border-b border-[#d4a24c]/40 bg-transparent text-white md:block">
+    <div className={`fixed inset-x-0 top-0 z-50 hidden border-b transition-colors duration-300 md:block ${scrolled ? "bg-[#07110f] border-[#d4a24c]/20" : "bg-transparent border-[#d4a24c]/40"} text-white`}>
       <div className="mx-auto flex h-[66px] max-w-[1320px] items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Social icons */}
         <ul className="flex items-center gap-7">

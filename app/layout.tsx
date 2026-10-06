@@ -20,10 +20,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={poppins.className}>
+        <Topbar />
+        <Navbar />
         <SmoothScroll>
           <div className="relative">
-            <Topbar />
-            <Navbar />
             {children}
             <Footer />
           </div>
