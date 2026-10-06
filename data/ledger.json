@@ -907,16 +907,16 @@
                 "icon": "FiPhone",
                 "title": "Phone Number",
                 "lines": [
-                  "+1 234 567 8900",
-                  "+1 234 567 8901"
+                  "+1 0000000000",
+                  "+1 0000000000"
                 ]
               },
               {
                 "icon": "FiMail",
                 "title": "Email Address",
                 "lines": [
-                  "info@ledgerco.com",
-                  "support@ledgerco.com"
+                  "dummy@xyz.com",
+                  "dummy@abc.com"
                 ]
               },
               {
