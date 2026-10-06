@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { iconMap } from "@/app/components/iconMap";
 import { HiChevronRight, HiArrowRight } from "react-icons/hi2";
@@ -15,7 +16,13 @@ export default function ServiceSidebar({ data, services, currentSlug }: { data: 
   return (
     <div className="w-full lg:w-[320px] shrink-0 flex flex-col gap-8">
       {/* Services List */}
-      <div className="bg-[#0f3d3a] rounded-xl overflow-hidden shadow-lg p-6">
+      <motion.div 
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="bg-[#0f3d3a] rounded-xl overflow-hidden shadow-lg p-6"
+      >
         <h3 className="text-white font-serif text-xl font-bold mb-2">{data.servicesTitle}</h3>
         <div className="h-[2px] w-10 bg-[#D4AF37] mb-4" />
         <ul className="flex flex-col gap-2">
@@ -38,10 +45,16 @@ export default function ServiceSidebar({ data, services, currentSlug }: { data: 
             );
           })}
         </ul>
-      </div>
+      </motion.div>
 
       {/* Consultation Form */}
-      <div className="bg-[#fcfaf7] border border-[#e6e3dc] rounded-xl shadow-sm p-6">
+      <motion.div 
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="bg-[#fcfaf7] border border-[#e6e3dc] rounded-xl shadow-sm p-6"
+      >
         <h3 className="text-[#0f3d3a] font-serif text-xl font-bold mb-2">{data.formTitle}</h3>
          <div className="h-[2px] w-10 bg-[#D4AF37] mb-4" />
         <p className="text-sm text-gray-500 mb-6">{data.formSubtitle}</p>
@@ -89,7 +102,7 @@ export default function ServiceSidebar({ data, services, currentSlug }: { data: 
             <HiArrowRight />
           </button>
         </form>
-      </div>
+      </motion.div>
     </div>
   );
 }

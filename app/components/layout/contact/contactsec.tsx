@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import { site } from "@/data/index";
@@ -49,7 +50,13 @@ export default function ContactSection() {
       <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
         <div className="grid overflow-hidden rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] lg:grid-cols-[1.05fr_1fr]">
           {/* LEFT: FORM */}
-          <div className="bg-white p-6 sm:p-8 lg:p-10">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white p-6 sm:p-8 lg:p-10"
+          >
             <div className="flex items-center gap-3">
               <span className="h-px w-8 bg-[#c98f3a]" />
               <span className="text-xs font-medium uppercase tracking-wide text-[#c98f3a]">
@@ -153,10 +160,16 @@ export default function ContactSection() {
                 <FiArrowRight />
               </button>
             </form>
-          </div>
+          </motion.div>
 
           {/* RIGHT: INFO */}
-          <div className="relative isolate min-h-[420px] overflow-hidden bg-[#0b2e2c]">
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="relative isolate min-h-[420px] overflow-hidden bg-[#0b2e2c]"
+          >
             <Image
               src={data.image}
               alt="Modern office interior"
@@ -195,7 +208,7 @@ export default function ContactSection() {
                 );
               })}
             </ul>
-          </div>
+          </motion.div>
         </div>
 
         {/* MAP */}

@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { site } from "@/data/index";
 import { iconMap } from "@/app/components/iconMap";
 
@@ -26,7 +29,13 @@ export default function Process() {
     <section className="mt-8 sm:mt-10 md:mt-12 lg:mt-14">
       <div className="mx-auto grid max-w-[1320px] grid-cols-1 gap-3 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
         {/* ---------- Heading (row 1, right) ---------- */}
-        <div className="order-first flex h-full flex-col justify-center rounded-3xl bg-white px-6 py-8 lg:order-none lg:col-span-7 lg:col-start-6 lg:row-start-1 lg:rounded-tl-[48px] lg:px-10">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="order-first flex h-full flex-col justify-center rounded-3xl bg-white px-6 py-8 lg:order-none lg:col-span-7 lg:col-start-6 lg:row-start-1 lg:rounded-tl-[48px] lg:px-10"
+        >
           <div className="flex items-center gap-4">
             <span className="h-[2px] w-10 bg-[#b98a4a]" />
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#0b3b34]">
@@ -40,10 +49,16 @@ export default function Process() {
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-gray-500">
             {data.description}
           </p>
-        </div>
+        </motion.div>
 
         {/* ---------- Step 01 (row 1, left) ---------- */}
-        <article className="flex h-full flex-col rounded-3xl bg-[#0b3b34] p-7 text-white lg:col-span-5 lg:row-start-1 lg:rounded-br-[56px] lg:pr-10">
+        <motion.article 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="flex h-full flex-col rounded-3xl bg-[#0b3b34] p-7 text-white lg:col-span-5 lg:row-start-1 lg:rounded-br-[56px] lg:pr-10"
+        >
           <div className="flex items-start justify-between">
             <IconBadge icon={iconMap[step1.icon]} dark />
             <span className="text-2xl font-medium tracking-wide">{step1.number}</span>
@@ -52,16 +67,28 @@ export default function Process() {
           <p className="mt-2 max-w-sm text-sm leading-relaxed text-white/75">
             {step1.text}
           </p>
-        </article>
+        </motion.article>
 
         {/* ---------- Image 1 (row 2, left) ---------- */}
-        <div className="relative h-60 w-full overflow-hidden rounded-3xl border-4 border-white shadow-md lg:col-span-5 lg:row-start-2 lg:h-full lg:min-h-[270px] lg:rounded-tr-[56px]">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="relative h-60 w-full overflow-hidden rounded-3xl border-4 border-white shadow-md lg:col-span-5 lg:row-start-2 lg:h-full lg:min-h-[270px] lg:rounded-tr-[56px]"
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={step1.image} alt={step1.title} className="absolute inset-0 h-full w-full object-cover" />
-        </div>
+        </motion.div>
 
         {/* ---------- Step 02 (row 2, right) ---------- */}
-        <article className="flex h-full flex-col rounded-3xl bg-[#0b3b34] p-7 text-white lg:col-span-7 lg:row-start-2 lg:rounded-tl-[56px] lg:rounded-bl-[56px] lg:pl-12">
+        <motion.article 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="flex h-full flex-col rounded-3xl bg-[#0b3b34] p-7 text-white lg:col-span-7 lg:row-start-2 lg:rounded-tl-[56px] lg:rounded-bl-[56px] lg:pl-12"
+        >
           <div className="flex items-start justify-between">
             <IconBadge icon={iconMap[step2.icon]} dark />
             <span className="text-2xl font-medium tracking-wide">{step2.number}</span>
@@ -70,16 +97,28 @@ export default function Process() {
           <p className="mt-2 max-w-md text-sm leading-relaxed text-white/75">
             {step2.text}
           </p>
-        </article>
+        </motion.article>
 
         {/* ---------- Image 2 (row 3, left) ---------- */}
-        <div className="relative h-60 w-full overflow-hidden rounded-3xl border-4 border-white shadow-md lg:col-span-7 lg:row-start-3 lg:h-full lg:min-h-[270px] lg:rounded-br-[56px]">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="relative h-60 w-full overflow-hidden rounded-3xl border-4 border-white shadow-md lg:col-span-7 lg:row-start-3 lg:h-full lg:min-h-[270px] lg:rounded-br-[56px]"
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={step2.image} alt={step2.title} className="absolute inset-0 h-full w-full object-cover" />
-        </div>
+        </motion.div>
 
         {/* ---------- Step 03 (row 3, right) ---------- */}
-        <article className="flex h-full flex-col rounded-3xl bg-[#f7ecd9] p-7 text-[#0b3b34] lg:col-span-5 lg:row-start-3 lg:rounded-tl-[56px] lg:pl-10">
+        <motion.article 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="flex h-full flex-col rounded-3xl bg-[#f7ecd9] p-7 text-[#0b3b34] lg:col-span-5 lg:row-start-3 lg:rounded-tl-[56px] lg:pl-10"
+        >
           <div className="flex items-center gap-4">
             <IconBadge icon={iconMap[step3.icon]} />
             <span className="h-[2px] w-8 bg-[#b98a4a]" />
@@ -89,7 +128,7 @@ export default function Process() {
           <p className="mt-2 text-sm leading-relaxed text-gray-600">
             {step3.text}
           </p>
-        </article>
+        </motion.article>
       </div>
     </section>
   );

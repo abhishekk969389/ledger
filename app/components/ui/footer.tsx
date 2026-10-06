@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/data/index";
@@ -21,7 +24,12 @@ export default function Footer() {
     <footer className="bg-[#0a3028] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14">
       <div className="mx-auto grid max-w-[1320px] gap-12 px-4 py-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1.1fr_1.2fr] sm:px-6 lg:px-8">
         {/* Brand */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0 }}
+          viewport={{ once: true }}
+        >
           <Link href="/" className="inline-block">
             <Image
               src={brand.footerLogo.src}
@@ -50,10 +58,15 @@ export default function Footer() {
               );
             })}
           </ul>
-        </div>
+        </motion.div>
 
         {/* Quick links */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          viewport={{ once: true }}
+        >
           <Heading>Quick Links</Heading>
           <ul className="space-y-3.5">
             {data.quickLinks.map((l) => (
@@ -68,10 +81,15 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
 
         {/* Services */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <Heading>Our Services</Heading>
           <ul className="space-y-3.5">
             {data.services.map((s: any) => (
@@ -86,10 +104,15 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
 
         {/* Contact */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
           <Heading>Contact Us</Heading>
           <ul className="space-y-5">
             {data.contacts.map(({ icon, lines }) => {
@@ -110,7 +133,7 @@ export default function Footer() {
               );
             })}
           </ul>
-        </div>
+        </motion.div>
       </div>
 
       {/* Bottom bar */}

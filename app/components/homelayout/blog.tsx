@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { HiArrowLongRight, HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { site } from "@/data/index";
 import { iconMap } from "@/app/components/iconMap";
@@ -32,7 +35,13 @@ export default function Blogs({
   return (
     <section className="mt-8 sm:mt-10 md:mt-12 lg:mt-14 mb-16">
       {/* Heading */}
-      <div className="mx-auto max-w-3xl px-6 text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="mx-auto max-w-3xl px-6 text-center"
+      >
         <div className="flex items-center justify-center gap-4">
           <span className="h-[2px] w-10 bg-[#b98a4a]" />
           <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#0b3b34]">
@@ -49,13 +58,17 @@ export default function Blogs({
         <p className="mx-auto mt-2 max-w-2xl text-gray-500">
           {data.description}
         </p>
-      </div>
+      </motion.div>
 
       {/* Cards */}
       <div className="mx-auto mt-10 grid max-w-[1320px] gap-6 px-4 sm:grid-cols-2 lg:grid-cols-3 sm:px-6 lg:px-8">
-        {displayPosts.map((p) => (
-          <article
+        {displayPosts.map((p, i) => (
+          <motion.article
             key={p.title}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: i * 0.1 }}
+            viewport={{ once: true }}
             className="group flex flex-col overflow-hidden rounded-lg bg-white shadow-[0_8px_30px_rgba(0,0,0,0.10)]"
           >
             <div className="relative h-[200px] overflow-hidden">
@@ -91,7 +104,7 @@ export default function Blogs({
                 </span>
               </Link>
             </div>
-          </article>
+          </motion.article>
         ))}
       </div>
 

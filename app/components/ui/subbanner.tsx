@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Link from "next/link";
 import type { LedgerSubBannerData } from "@/data/index";
 
@@ -22,7 +25,12 @@ export default function SubBanner({ data }: { data: LedgerSubBannerData }) {
         style={{ backgroundImage: `url(${data.bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-[1320px] px-4 pb-24 md:pb-24 sm:px-10 lg:px-24">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="relative z-10 mx-auto w-full max-w-[1320px] px-4 pb-24 md:pb-24 sm:px-10 lg:px-24"
+      >
         <h1 className="text-4xl sm:text-5xl font-bold text-white md:mb-6">
           {data.title}
         </h1>
@@ -40,7 +48,7 @@ export default function SubBanner({ data }: { data: LedgerSubBannerData }) {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

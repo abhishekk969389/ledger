@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { FaPlus } from "react-icons/fa";
 import { HiArrowLongRight } from "react-icons/hi2";
 import { site } from "@/data/index";
@@ -15,7 +18,13 @@ export default function About({ hideCTA = false }: { hideCTA?: boolean }) {
 
       <div className="relative mx-auto grid max-w-[1320px] px-4 sm:px-6 lg:px-8 items-center gap-14 lg:grid-cols-2">
         {/* ---------- Left: image collage ---------- */}
-        <div className="relative mx-auto h-[420px] w-full max-w-[600px] sm:h-[520px]">
+        <motion.div 
+          initial={{ opacity: 0, x: -30 }} 
+          whileInView={{ opacity: 1, x: 0 }} 
+          transition={{ duration: 0.6 }} 
+          viewport={{ once: true }} 
+          className="relative mx-auto h-[420px] w-full max-w-[600px] sm:h-[520px]"
+        >
           {/* dark green shape */}
           <div className="absolute -left-4 bottom-0 h-[45%] w-[35%] rounded-bl-3xl bg-[#0b3b34] [clip-path:polygon(0_25%,100%_0,100%_100%,0_100%)]" />
           {/* beige accent */}
@@ -59,10 +68,15 @@ export default function About({ hideCTA = false }: { hideCTA?: boolean }) {
               <span className="font-semibold text-[#b98a4a]">{data.clients.textPrefix}</span> {data.clients.textSuffix}
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* ---------- Right: content ---------- */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: 30 }} 
+          whileInView={{ opacity: 1, x: 0 }} 
+          transition={{ duration: 0.6 }} 
+          viewport={{ once: true }}
+        >
           <div className="flex items-center gap-4">
             <span className="h-[2px] w-10 bg-[#b98a4a]" />
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#0b3b34]">
@@ -118,7 +132,7 @@ export default function About({ hideCTA = false }: { hideCTA?: boolean }) {
               </span>
             </a>
           )}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

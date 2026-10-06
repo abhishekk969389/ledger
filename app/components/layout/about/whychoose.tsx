@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { site } from "@/data/index";
 import { iconMap } from "@/app/components/iconMap";
 
@@ -9,7 +12,12 @@ export default function WhyChooseUs() {
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
           {/* Content */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <div className="flex items-center gap-4">
               <span className="h-[2px] w-10 bg-[#b98a4a]" />
               <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#0b3b34]">
@@ -42,17 +50,23 @@ export default function WhyChooseUs() {
                 );
               })}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Image */}
-          <div className="overflow-hidden">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="overflow-hidden"
+          >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={data.image}
               alt={data.titlePrefix}
               className="h-[320px] w-full object-cover sm:h-[420px] lg:h-[530px]"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

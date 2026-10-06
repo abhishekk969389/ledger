@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { HiArrowLongRight } from "react-icons/hi2";
 import { site } from "@/data/index";
@@ -20,7 +23,12 @@ export default function Banner() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#07110f]/80 via-transparent to-[#07110f]/40" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-[1320px] px-4 pt-24 pb-12 sm:pt-32 sm:px-6 lg:px-8 lg:pb-4 lg:pt-0">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }} 
+        animate={{ opacity: 1, y: 0 }} 
+        transition={{ duration: 0.8 }} 
+        className="relative z-10 mx-auto w-full max-w-[1320px] px-4 pt-24 pb-12 sm:pt-32 sm:px-6 lg:px-8 lg:pb-4 lg:pt-0"
+      >
         <div className="flex items-center gap-5">
           <span className="h-[2px] w-14 bg-[#d4a24c]" />
           <p className="text-sm font-medium uppercase tracking-[0.4em] text-white/90">
@@ -50,7 +58,7 @@ export default function Banner() {
             <HiArrowLongRight />
           </span>
         </Link>
-      </div>
+      </motion.div>
     </section>
   );
 }

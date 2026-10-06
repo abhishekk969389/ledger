@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { site } from "@/data/index";
 import { iconMap } from "@/app/components/iconMap";
 import AnimatedCounter from "@/app/components/ui/animated-counter";
@@ -31,7 +32,12 @@ export default function Achievements() {
 
       <div className="relative mx-auto grid max-w-[1320px] px-4 sm:px-6 lg:px-8 items-center gap-10 py-14 lg:grid-cols-[30%_1fr] lg:gap-8 xl:grid-cols-[28%_1fr]">
         {/* Text */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <div className="flex items-center gap-4">
             <span className="h-[2px] w-10 bg-[#b98a4a]" />
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#0b3b34]">
@@ -48,15 +54,19 @@ export default function Achievements() {
           <p className="mt-5 max-w-md text-sm leading-relaxed text-gray-500">
             {data.description}
           </p>
-        </div>
+        </motion.div>
 
         {/* Stat cards */}
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:ml-6 lg:max-w-[640px]">
-          {data.stats.map(({ icon, number, suffix, label }) => {
+          {data.stats.map(({ icon, number, suffix, label }, i) => {
             const Icon = iconMap[icon];
             return (
-              <div
+              <motion.div
                 key={label}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true }}
                 className="flex flex-col items-center rounded-md bg-white px-3 pb-7 pt-6 text-center shadow-[0_6px_24px_rgba(0,0,0,0.10)]"
               >
                 <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#f6efe1] text-2xl text-[#0b3b34] ring-1 ring-[#b98a4a]/20">
@@ -70,7 +80,7 @@ export default function Achievements() {
                 <p className="max-w-[90px] text-sm font-medium leading-snug text-gray-700">
                   {label}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
         </div>

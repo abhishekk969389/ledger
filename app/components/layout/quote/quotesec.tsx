@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import { iconMap } from "@/app/components/iconMap";
@@ -48,7 +49,12 @@ export default function QuoteSection() {
       <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
         <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-12">
           {/* LEFT */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <div className="flex items-center gap-3">
               <span className="h-px w-10 bg-[#c98f3a]" />
               <span className="text-xs font-medium uppercase tracking-[0.3em] text-[#0b3b34]">
@@ -100,10 +106,16 @@ export default function QuoteSection() {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* RIGHT */}
-          <div className="rounded-2xl bg-white p-6 shadow-[0_10px_40px_rgba(0,0,0,0.06)] sm:p-8">
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="rounded-2xl bg-white p-6 shadow-[0_10px_40px_rgba(0,0,0,0.06)] sm:p-8"
+          >
             <span className="block h-px w-10 bg-[#c98f3a]" />
             <h3 className="mt-3 font-serif text-3xl font-bold text-[#0f3d3a]">
               {data.formTitle}
@@ -220,7 +232,7 @@ export default function QuoteSection() {
                 Your information is secure and will never be shared.
               </p>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

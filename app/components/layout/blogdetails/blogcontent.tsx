@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { iconMap } from "@/app/components/iconMap";
 import { FaQuoteLeft } from "react-icons/fa";
 
@@ -8,7 +11,13 @@ export default function BlogContent({ data }: { data: any }) {
     const Quote = iconMap["FaQuoteLeft"];
 
     return (
-        <div className="w-full lg:w-2/3">
+        <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="w-full lg:w-2/3"
+        >
             {/* Main Image */}
             <div className="w-full h-[350px] md:h-[450px] rounded-lg overflow-hidden mb-6">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -73,6 +82,6 @@ export default function BlogContent({ data }: { data: any }) {
                     </div>
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 }

@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { FiCheck, FiHome } from "react-icons/fi";
 import { site } from "@/data/index";
@@ -8,7 +11,13 @@ export default function ThankYouSection() {
   return (
     <section className="flex min-h-[70vh] items-center mt-8 sm:mt-10 md:mt-12 lg:mt-14">
       <div className="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30, scale: 0.95 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mx-auto flex max-w-2xl flex-col items-center text-center"
+        >
           {/* Check icon with partial gold ring */}
           <div className="relative flex h-24 w-24 items-center justify-center sm:h-28 sm:w-28">
             <svg
@@ -56,7 +65,7 @@ export default function ThankYouSection() {
             <FiHome className="h-5 w-5" />
             {data.buttonText}
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

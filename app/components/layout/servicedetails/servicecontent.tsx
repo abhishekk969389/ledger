@@ -1,12 +1,19 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { iconMap } from "@/app/components/iconMap";
 
 export default function ServiceContent({ data }: { data: any }) {
   return (
     <div className="flex-1">
       {/* Overview */}
-      <div className="mb-12 grid gap-8 lg:grid-cols-2 items-start">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="mb-12 grid gap-8 lg:grid-cols-2 items-start"
+      >
         <div>
           <div className="flex items-center gap-3 mb-6">
             <span className="h-px w-10 bg-[#c98f3a]" />
@@ -22,10 +29,16 @@ export default function ServiceContent({ data }: { data: any }) {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={data.overview.image} alt={data.overview.title} className="w-full h-full object-cover" />
         </div>
-      </div>
+      </motion.div>
 
       {/* Key Benefits */}
-      <div className="mb-12">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="mb-12"
+      >
         <div className="flex items-center gap-3 mb-6">
           <span className="h-px w-10 bg-[#c98f3a]" />
           <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#0f3d3a]">{data.keyBenefits.title}</h2>
@@ -46,10 +59,15 @@ export default function ServiceContent({ data }: { data: any }) {
             );
           })}
         </div>
-      </div>
+      </motion.div>
 
       {/* Our Process */}
-      <div>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         <div className="flex items-center gap-3 mb-2">
           <span className="h-px w-10 bg-[#c98f3a]" />
           <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#0f3d3a]">{data.process.title}</h2>
@@ -74,7 +92,7 @@ export default function ServiceContent({ data }: { data: any }) {
             );
           })}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

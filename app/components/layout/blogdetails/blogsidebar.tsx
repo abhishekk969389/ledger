@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { site } from "@/data/index";
 import { HiArrowLongRight } from "react-icons/hi2";
@@ -6,7 +9,13 @@ export default function BlogSidebar({ data }: { data: any }) {
     const recentPosts = site.ourBlogs.posts.slice(0, 4);
 
     return (
-        <aside className="w-full lg:w-1/3 flex flex-col gap-8">
+        <motion.aside
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="w-full lg:w-1/3 flex flex-col gap-8"
+        >
             {/* Recent Posts */}
             <div className="bg-[#f8f9fa] p-6 rounded-lg">
                 <h3 className="text-2xl font-bold text-[#0b3b34] mb-6">{data.recentPostsTitle || "Recent Posts"}
@@ -77,6 +86,6 @@ export default function BlogSidebar({ data }: { data: any }) {
                     </div>
                 </div>
             )}
-        </aside>
+        </motion.aside>
     );
 }

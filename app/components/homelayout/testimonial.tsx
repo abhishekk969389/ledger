@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 import { site } from "@/data/index";
@@ -37,7 +38,13 @@ export default function Testimonials() {
   return (
     <section className="mt-8 sm:mt-10 md:mt-12 lg:mt-14">
       {/* Heading */}
-      <div className="mx-auto max-w-3xl px-6 text-center">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="mx-auto max-w-3xl px-6 text-center"
+      >
         <div className="flex items-center justify-center gap-4">
           <span className="h-[2px] w-10 bg-[#b98a4a]" />
           <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#0b3b34]">
@@ -51,7 +58,7 @@ export default function Testimonials() {
         <p className="mx-auto mt-2 max-w-2xl text-gray-500">
           {data.description}
         </p>
-      </div>
+      </motion.div>
 
       {/* Slider */}
       <div className="relative mx-auto mt-6 max-w-[1320px] px-4 sm:px-6 lg:px-8">
@@ -76,13 +83,19 @@ export default function Testimonials() {
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${(current * 100) / perView}%)` }}
           >
-            {data.reviews.map((r) => (
+            {data.reviews.map((r, i) => (
               <div
                 key={r.name}
                 className="shrink-0 px-3"
                 style={{ width: `${100 / perView}%` }}
               >
-                <article className="flex h-full flex-col rounded-xl bg-white p-7 border-1 border-gray-200">
+                <motion.article 
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                  className="flex h-full flex-col rounded-xl bg-white p-7 border-1 border-gray-200"
+                >
                   {QuoteLeft && <QuoteLeft className="text-4xl text-[#b98a4a]" />}
 
                   <p className="mt-4 min-h-[130px] text-[17px] leading-relaxed text-gray-700">
@@ -112,7 +125,7 @@ export default function Testimonials() {
                     </div>
                     {QuoteRight && <QuoteRight className="ml-auto shrink-0 text-5xl text-gray-200" />}
                   </div>
-                </article>
+                </motion.article>
               </div>
             ))}
           </div>

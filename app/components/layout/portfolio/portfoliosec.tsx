@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { site } from "@/data/index";
 
@@ -8,9 +11,13 @@ export default function Portfolio() {
         <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14">
             <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7">
-                    {data.projects.map((p) => (
-                        <article
+                    {data.projects.map((p, i) => (
+                        <motion.article
                             key={p.title}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: i * 0.1 }}
+                            viewport={{ once: true }}
                             className="group flex flex-col overflow-hidden rounded-md bg-white shadow-[0_6px_24px_rgba(0,0,0,0.10)]"
                         >
                             <div className="relative h-[200px] overflow-hidden sm:h-[210px]">
@@ -36,7 +43,7 @@ export default function Portfolio() {
                                 </h3>
                                 <p className="mt-2 text-sm leading-relaxed text-gray-600">{p.text}</p>
                             </div>
-                        </article>
+                        </motion.article>
                     ))}
                 </div>
             </div>
