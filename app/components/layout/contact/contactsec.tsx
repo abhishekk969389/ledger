@@ -153,7 +153,7 @@ export default function ContactSection() {
 
               <button
                 type="submit"
-                className="flex w-full items-center justify-center gap-2 rounded-md bg-[#0f3d3a] px-6 py-3.5 text-sm font-medium text-white transition hover:bg-[#0b2e2c] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0f3d3a] focus-visible:ring-offset-2"
+                className="flex w-full items-center justify-center gap-2 rounded-md bg-[#c98f3a] px-6 py-3.5 text-sm font-medium text-white transition cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0f3d3a] focus-visible:ring-offset-2"
               >
                 <FiSettings className="h-4 w-4" />
                 Send Message

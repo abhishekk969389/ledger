@@ -70,17 +70,17 @@ export default function Services({ gridMode = false }: { gridMode?: boolean }) {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                   viewport={{ once: true }}
-                  className="overflow-hidden rounded-lg bg-white border border-gray-200 shadow-sm transition hover:shadow-md"
+                  className="flex flex-col h-full overflow-hidden rounded-lg bg-white border border-gray-200 shadow-sm transition hover:shadow-md"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={img} alt={title} className="h-[180px] w-full object-cover" />
-                  <div className="relative px-6 pb-6">
+                  <div className="relative px-6 pb-6 flex-1 flex flex-col">
                     <div className="-mt-9 flex h-[68px] w-[68px] items-center justify-center rounded-full border-[5px] border-white bg-[#0b3b34] text-3xl text-[#e5b861]">
                       {Icon && <Icon />}
                     </div>
                     <h3 className="mt-4 text-xl font-semibold text-[#0b3b34]">{title}</h3>
                     <span className="mt-2 block h-[2px] w-8 bg-[#b98a4a]" />
-                    <p className="mt-3 min-h-[72px] text-[15px] leading-relaxed text-gray-500">
+                    <p className="mt-3 flex-1 text-[15px] leading-relaxed text-gray-500">
                       {text}
                     </p>
                     <Link href={`/servicedetails?service=${slug}`} className="group mt-4 flex items-center justify-between text-sm font-semibold text-gray-900">
@@ -123,7 +123,7 @@ export default function Services({ gridMode = false }: { gridMode?: boolean }) {
               }}
             >
               <div
-                className="flex transition-transform duration-500 ease-in-out"
+                className="flex transition-transform duration-500 ease-in-out items-stretch"
                 style={{ transform: `translateX(-${(current * 100) / perView}%)` }}
               >
                 {data.services.map(({ title, text, icon, img, slug }, i) => {
@@ -131,7 +131,7 @@ export default function Services({ gridMode = false }: { gridMode?: boolean }) {
                   return (
                     <div
                       key={title}
-                      className="shrink-0 px-3"
+                      className="shrink-0 px-3 flex"
                       style={{ width: `${100 / perView}%` }}
                     >
                       <motion.article 
@@ -139,19 +139,19 @@ export default function Services({ gridMode = false }: { gridMode?: boolean }) {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: i * 0.1 }}
                         viewport={{ once: true }}
-                        className="overflow-hidden rounded-lg bg-white border border-gray-200"
+                        className="flex flex-col w-full overflow-hidden rounded-lg bg-white border border-gray-200"
                       >
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src={img} alt={title} className="h-[180px] w-full object-cover" />
 
-                        <div className="relative px-6 pb-6">
+                        <div className="relative px-6 pb-6 flex-1 flex flex-col">
                           <div className="-mt-9 flex h-[68px] w-[68px] items-center justify-center rounded-full border-[5px] border-white bg-[#0b3b34] text-3xl text-[#e5b861]">
                             {Icon && <Icon />}
                           </div>
 
                           <h3 className="mt-4 text-xl font-semibold text-[#0b3b34]">{title}</h3>
                           <span className="mt-2 block h-[2px] w-8 bg-[#b98a4a]" />
-                          <p className="mt-3 min-h-[72px] text-[15px] leading-relaxed text-gray-500">
+                          <p className="mt-3 flex-1 text-[15px] leading-relaxed text-gray-500">
                             {text}
                           </p>
 

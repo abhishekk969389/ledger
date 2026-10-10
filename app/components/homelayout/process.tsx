@@ -8,7 +8,7 @@ function IconBadge({ icon: Icon, dark }: { icon: React.ElementType | undefined; 
   if (!Icon) return null;
   return (
     <span
-      className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full text-2xl ring-4 ${
+      className={`flex h-18 w-18 shrink-0 items-center justify-center rounded-full text-[44px] ring-[6px] ${
         dark
           ? "bg-[#f6efe1] text-[#0b3b34] ring-white/10"
           : "bg-white text-[#b98a4a] ring-[#b98a4a]/20"
@@ -61,7 +61,7 @@ export default function Process() {
         >
           <div className="flex items-start justify-between">
             <IconBadge icon={iconMap[step1.icon]} dark />
-            <span className="text-2xl font-medium tracking-wide">{step1.number}</span>
+            <span className="text-4xl lg:text-[44px] font-medium tracking-wide">{step1.number}</span>
           </div>
           <h3 className="mt-5 text-2xl font-semibold">{step1.title}</h3>
           <p className="mt-2 max-w-sm text-sm leading-relaxed text-white/75">
@@ -91,7 +91,7 @@ export default function Process() {
         >
           <div className="flex items-start justify-between">
             <IconBadge icon={iconMap[step2.icon]} dark />
-            <span className="text-2xl font-medium tracking-wide">{step2.number}</span>
+            <span className="text-4xl lg:text-[44px] font-medium tracking-wide">{step2.number}</span>
           </div>
           <h3 className="mt-5 text-2xl font-semibold">{step2.title}</h3>
           <p className="mt-2 max-w-md text-sm leading-relaxed text-white/75">
@@ -122,7 +122,7 @@ export default function Process() {
           <div className="flex items-center gap-4">
             <IconBadge icon={iconMap[step3.icon]} />
             <span className="h-[2px] w-8 bg-[#b98a4a]" />
-            <span className="ml-auto text-2xl font-medium tracking-wide">{step3.number}</span>
+            <span className="ml-auto text-[44px] lg:text-5xl font-medium tracking-wide">{step3.number}</span>
           </div>
           <h3 className="mt-5 text-2xl font-semibold">{step3.title}</h3>
           <p className="mt-2 text-sm leading-relaxed text-gray-600">

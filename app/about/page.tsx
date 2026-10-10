@@ -11,7 +11,6 @@ export default function AboutPage() {
     
         <AboutSection hideCTA={true} />
         <WhyChooseUs/>
-        <Achievements/>
     
     </main>
   );
